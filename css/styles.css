@@ -1,0 +1,22 @@
+/*
+    color: #00e2a7;
+    color: #ceccda;
+    color: #566586;
+    color: #3a4961;
+    color: #ffffff*/
+
+.bg-light{
+    background-color:#ffffff!important;
+    color: white!important;
+    
+}  
+
+body{
+    background-color:#3a4961;
+
+}
+
+.btn-success{
+    background-color:#00e2a7!important;
+}
+
