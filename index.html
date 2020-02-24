@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promo</title>
     <link rel="stylesheet" href="frameworks/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
+    
+
 </head>
 <body>
     <section id="header">
@@ -47,26 +53,130 @@
         </div>
     </section>
 
-   <div id="pricing" class="pricing">
-       <div class="container">
-            <div class="row">
-                <h2>Planes de pago</h2>
-                
-                <div class="col-lg-3 col-sm-3">
-                    <div class="packages">
-                        <h4>Gratis</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, dolorem!</p>
-                        <hr>
-                        <ul>
-                            <li>Publicacion de 3 articulos mensualmente</li>
-                            <li>Obetenr publicidad</li>
-                            <li>Venta rapidas de producto</li>
-                        </ul>
+    <div class="text-center pricing" >
+        <div class="container">
+            <br><hr>
+            <h2>Planes de Pago</h2>
+            <p>Estos planes solo son para empresas que quieren promocionar sus productos</p>
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header car-header">
+                            <h4 class="my-0 font-weight-normal">Gratis</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1><b>$0 </b><small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Promocionar 3 productos</li>
+                                <li>Soporte via email</li>
+                                <li>Sin costo adicional</li>
+                                <li>Acesso al centro de ayuda</li>
+                            </ul> <button type="button" class="btn btn-lg btn-block btn-outline-danger">Registrarse gratis</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Pro</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1><b>$50 </b><small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Promocionar 100 productos</li>
+                                <li>Soporte via email</li>
+                                <li>Prioridad en las promociones</li>
+                                <li>Acesso al centro de ayuda</li>
+                            </ul> <button type="button" class="btn btn-lg btn-block btn-danger">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Premium</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1><b>$223 </b><small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>promocionar productos ilimitadamente</li>
+                                <li>Soporte via email</li>
+                                <li>Prioridad principal en las promociones</li>
+                                <li>Acesso al centro de ayuda</li>
+                            </ul> <button type="button" class="btn btn-lg btn-block btn-danger">Registrarse</button>
+                        </div>
                     </div>
                 </div>
             </div>
-       </div>
-   </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="container" id="carousel">
+            <h2>Testimonials</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            	<!-- Carousel indicators -->
+            	<ol class="carousel-indicators">
+            		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            		<li data-target="#myCarousel" data-slide-to="1"></li>
+            		<li data-target="#myCarousel" data-slide-to="2"></li>
+            	</ol>   
+            	<!-- Wrapper for carousel items -->
+            	<div class="carousel-inner">		
+            		<div class="item carousel-item active">
+            			<div class="img-box"><img src="/examples/images/clients/3.jpg" alt=""></div>
+            			<p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+            			<p class="overview"><b>Michael Holz</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
+            			<div class="star-rating">
+            				<ul class="list-inline">
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            				</ul>
+            			</div>
+            		</div>
+            		<div class="item carousel-item">
+            			<div class="img-box"><img src="/examples/images/clients/1.jpg" alt=""></div>
+            			<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+            			<p class="overview"><b>Paula Wilson</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
+            			<div class="star-rating">
+            				<ul class="list-inline">
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            				</ul>
+            			</div>
+            		</div>
+            		<div class="item carousel-item">
+            			<div class="img-box"><img src="/examples/images/clients/2.jpg" alt=""></div>
+            			<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit.</p>
+            			<p class="overview"><b>Antonio Moreno</b>Web Developer at <a href="#">Circle Ltd.</a></p>
+            			<div class="star-rating">
+            				<ul class="list-inline">
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star"></i></li>
+            					<li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+            				</ul>
+            			</div>
+            		</div>		
+            	</div>
+            	<!-- Carousel controls -->
+            	<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+            		<i class="fa fa-angle-left"></i>
+            	</a>
+            	<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+            		<i class="fa fa-angle-right"></i>
+            	</a>
+            </div>
+        </div>
+    </div>
 
     
      
