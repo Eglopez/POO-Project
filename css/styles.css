@@ -138,7 +138,7 @@
     min-height: 340px;
 }
 .carousel .item a {
-    color: #eb7245;
+    color: #EFBF7F;
 }
 .carousel .img-box {
     width: 145px;
@@ -174,7 +174,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #999;
+    background: #0C5D7B;
     text-shadow: none;
     top: 4px;
 }
@@ -202,15 +202,54 @@
 .carousel-indicators li {	
     background: #0C5D7B;
     border-color: transparent;
-    width: 11px;
-    height: 11px;
-    margin: 1px 5px;
+    width: 8px;
+    height: 0px;
+    margin: 1px 3px;
     border-radius: 50%;
+    
 }
 .carousel-indicators li.active {
     border: none;
     background: #12103D;		
 }
+
+.footer {
+    
+    padding: 30px;
+    color: #cccccc;
+    background-color: #12103D;
+}
+
+
+.footer .social {
+    
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+
+.footer input {
+    
+    height: 40px;
+    width: 160px;
+    padding: 5px;
+    border: none;
+    background-color: #cccccc;
+    color: #000;
+}
+
+.footer .btn {
+    
+    padding: 10px 5px 10px;
+    margin: -3px 0 0 5px;
+}
+
 
 
 
