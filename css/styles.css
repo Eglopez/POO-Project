@@ -4,37 +4,41 @@
     color: #F20231;
     color: #EFBF7F;
     color: #F8E4CC*/
+/* 
+--------- Landing Page ---------
+*/
+
 *{
     margin: 0;
     padding: 0;
 }
 
 #header{
-        position: absolute;
-        z-index: 10;
-        width: 100%;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
 }
 
-.navbar{
+#header .navbar{
     padding: 50px 0;
 }
 
-.navbar-brand{
+#header .navbar-brand{
     font-weight: 600;
     font-size: 1.5em;
 }
 
-.navbar-dark .navbar-brand{
+#header .navbar-dark .navbar-brand{
     color: #F8E4CC!important;
 }
 
-.nav-item{
+#header .nav-item{
     font-weight: 600;
     text-transform: uppercase;
     padding-left: 10px;
 }
 
-.navbar-dark .navbar-nav .nav-item .nav-link:hover{
+#header .navbar-dark .navbar-nav .nav-item .nav-link:hover{
     background-color: #F8E4CC;
     color: #F20231;
 }
@@ -82,7 +86,7 @@
 
 .btn-danger{
     background-color: #F20231;
-    border-radius: 5%;
+    border-radius: 10%;
 }
 
 
@@ -254,6 +258,62 @@
     background-color: whitesmoke;
 }
 
+.footer .social{
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 0;
+}
+ 
+/*
+   --------------Sign Up----------------
+*/
+
+#navlogin{
+    z-index: 10;
+    width: 100%;
+}
+
+#navlogin .navbar-brand{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: white;   
+}
+
+#navlogin .nav-item{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 10px;
+    color: white;
+}
+
+#navlogin .bg-light{
+    background-color: #12103D!important;
+}
+
+#navlogin .nav-link:hover{
+    background-color: #F8E4CC;
+    color: #F20231;
+}
+
+#form{
+    background-color: #efbe7fad;
+    width: 40%;
+    color: black;
+}
+
+#form:hover{
+    background-color: #efbe7fde;
+    transition:all .5s ease-in-out;
+}
+
+#signbody{
+    background-color: whitesmoke;
+    background-image: url(../img/signback.svg);
+    
+}
 
 
 

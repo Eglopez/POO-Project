@@ -12,29 +12,80 @@
     <script src="../frameworks/bootstrap/js/bootstrap.min.js"></script>
 
 </head>
-<body>
-    <div class="container">
+<body id="signbody">
+    <div id="navlogin">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+              </div>
+            </div>
+          </nav>
+    </div><br><br>
+
+    <div class="container" id="form">
         <form>
+            <br>
+            <h2 class="text-center"><b>Registrate!</b></h2><br>
+            <div class="text-right">
+                <button type="button" class="btn btn-danger">Usuario</button>
+                <button type="button" class="btn btn-danger">Empresa</button><br><br>
+            </div>
+            <div class="row"><br>
+                <div class="col">
+                    <label for="formname">Name</label> 
+                    <input type="text" class="form-control" placeholder="First name" id="formname">
+                </div>
+                <div class="col">
+                    <label for="formlastname">Lastname</label>
+                   <input type="text" class="form-control" placeholder="Last name" id="formlastname">
+                </div>
+            </div>
             <div class="form-group">
-                <div class="row">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="First name">
+                <div>
+                    <label for="email">Email</label> 
+                    <input type="email" class="form-control" placeholder="Email" id="email">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="password" id="password">
+                </div>
+                <div>
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" class="form-control" placeholder="password" id="confirmpassword">
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="phone">Phone number</label>
+                    <input type="text" placeholder="(+504)" id="phone" class="form-control">
+                </div>
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
                     </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputPassword4">Password</label>
-                      <input type="password" class="form-control" id="inputPassword4">
-                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="mr-auto ml-auto">
+                    <button type="button" class="btn btn-danger" id="sign">Registrarse</button><br><br>
+                </div>
             </div>
         </form>
     </div>
+    <br><br><br><br>
 </body>
 </html>

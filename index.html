@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
     
@@ -57,7 +58,7 @@
     <div class="container text-center" id="offer">
         <h2>Benefits</h2>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 wow bounceInLeft" data-wow-delay="1s">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
@@ -66,7 +67,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 wow bounceInLeft" data-wow-delay=".8s">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
@@ -75,7 +76,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 wow bounceInLeft" data-wow-delay=".6s">
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
@@ -91,10 +92,10 @@
     <div class="text-center pricing" >
         <div class="container">
             <br><hr>
-            <h2>Planes de Pago</h2>
-            <p>Estos planes solo son para empresas que quieren promocionar sus productos</p>
+            <h2 class="wow fadeInUp">Planes de Pago</h2>
+            <p class="wow fadeInUp">Estos planes solo son para empresas que quieren promocionar sus productos</p>
             <div class="row pt-4">
-                <div class="col-md-4">
+                <div class="col-md-4 wow flipOutY" data-wow-delay=".5s">
                     <div class="card mb-4 box-shadow">
                         <div class="card-header car-header">
                             <h4 class="my-0 font-weight-normal">Gratis</h4>
@@ -110,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 wow flipOutY" data-wow-delay=".8s">
                     <div class="card mb-4 box-shadow">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal">Pro</h4>
@@ -126,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 wow flipOutY" data-wow-delay="1s">
                     <div class="card mb-4 box-shadow">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal">Premium</h4>
@@ -232,10 +233,10 @@
             
                 <div class="col-lg-4 col-md-4">
                     <h4>Stay in touch</h4>
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <i class="social fa fa-facebook" aria-hidden="true"></i>
+                    <i class="social fa fa-twitter" aria-hidden="true"></i>
+                    <i class="social fa fa-instagram" aria-hidden="true"></i>
+                    <i class="social fa fa-github" aria-hidden="true"></i>
                 </div>
             </div>    
         </div>
@@ -244,6 +245,10 @@
     
      
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
