@@ -86,7 +86,7 @@
 
 .btn-danger{
     background-color: #F20231;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 
@@ -314,6 +314,11 @@
     background-image: url(../img/signback.svg);
     
 }
+
+#businessForm{
+    display: none;
+}
+
 
 
 
