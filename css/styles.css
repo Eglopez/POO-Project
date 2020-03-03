@@ -319,6 +319,39 @@
     display: none;
 }
 
+/*
+-----------Home Page----------
+*/
+
+#navhome{
+    z-index: 10;
+    width: 100%;
+}
+
+#navhome .navbar-brand{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: white;   
+}
+
+#navhome .nav-item .nav-link{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 10px;
+    color: white;
+
+}
+
+#navhome .bg-light{
+    background-color: #12103D!important;
+}
+
+#navhome .nav-link:hover{
+    background-color: #F8E4CC;
+    color: #F20231;
+}
+
+
 
 
 
