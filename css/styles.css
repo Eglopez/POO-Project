@@ -101,6 +101,18 @@ a:active{
 
 }
 
+.border-danger{
+    color: #F20231!important;
+}
+
+.bg-danger{
+    background-color: #F20231!important;
+}
+
+.text-danger{
+    color: #F20231!important;
+}
+
 .btn-danger{
     background-color: #F20231;
     border-radius: 5%;
@@ -376,6 +388,12 @@ a:active{
 #business{
     color:#F20231;
 }
+
+#price{
+    color: #F20231;
+    font-size: 1.5em;
+}
+
 
 
 
