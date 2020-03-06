@@ -394,7 +394,22 @@ a:active{
     font-size: 1.5em;
 }
 
+#btn-login{
+    margin: 5px;
+    margin-left: 250px;
+}
 
+#user a:link{
+    color: black;
+}
+
+#user a:visited{
+    color: black;
+}
+
+#user a:hover{
+    background-color: whitesmoke;
+}
 
 
 

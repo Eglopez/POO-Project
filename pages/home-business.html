@@ -19,7 +19,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <a class="navbar-brand" href="home.html"><img src="../img/logonav.svg" alt=""></a>
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="user">
                 <li class="nav-item active">
                   <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
                 </li>
@@ -44,9 +44,21 @@
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user">Eduardo Lopez</i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="user">
+                            <a class="dropdown-item" href="#"><i class="fas fa-user text-danger"></i>Perfil</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-heart text-danger"></i>Favoritos</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-cart-arrow-down text-danger text-danger"></i>Compras</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt text-danger"></i>Cerrar sesion</a>
+                          </div>
+                    </li>
+                </ul>
               </form>
-              <button class="btn btn-danger" id="btn-login">Login</button>
-              <button class="btn btn-danger" id="btn-signup">Signup</button>
+              
             </div>
           </nav>
     </div><br>
@@ -72,6 +84,7 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
@@ -90,6 +103,7 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
@@ -108,6 +122,7 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
@@ -126,6 +141,7 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
@@ -198,6 +214,7 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
@@ -215,24 +232,7 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
@@ -251,6 +251,26 @@
                             <li><i class="fas fa-tags"></i>30 disponibles</li>
                             <li>Antes L.4000</li>
                             <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card">
+                    <img src="../img/mueble.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <ul>
+                            <li>15% Descuento los dias Miercoles</li>
+                            <li id="business">
+                                Pizza Hut
+                            </li>
+                            <li><i class="fas fa-tags"></i>30 disponibles</li>
+                            <li>Antes L.4000</li>
+                            <li id="price">L.2000</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger "></i>Comprar</li>
                         </ul>
                     </div>
                 </div>
