@@ -26,6 +26,7 @@
 #header .navbar-brand{
     font-weight: 600;
     font-size: 1.5em;
+    
 }
 
 #header .navbar-dark .navbar-brand{
@@ -41,6 +42,22 @@
 #header .navbar-dark .navbar-nav .nav-item .nav-link:hover{
     background-color: #F8E4CC;
     color: #F20231;
+}
+
+a:link{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    color: white;
 }
 
 .main{
@@ -279,7 +296,7 @@
 #navlogin .navbar-brand{
     font-weight: 600;
     font-size: 1.5em;
-    color: white;   
+    color: white; 
 }
 
 #navlogin .nav-item{
@@ -331,7 +348,8 @@
 #navhome .navbar-brand{
     font-weight: 600;
     font-size: 1.5em;
-    color: white;   
+    color: white;  
+  
 }
 
 #navhome .nav-item .nav-link{
@@ -351,6 +369,13 @@
     color: #F20231;
 }
 
+#cards li{
+    list-style:none;
+}
+
+#business{
+    color:#F20231;
+}
 
 
 
