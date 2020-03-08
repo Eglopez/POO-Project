@@ -95,7 +95,7 @@
             </div><br>
             <div class="row">
                 <div class="mr-auto ml-auto">
-                    <button type="button" class="btn btn-lg btn-danger" id="sign">Registrarse</button><br><br>
+                    <button type="button" class="btn btn-lg btn-danger" id="sign"><a href="home-user.html">Registrarse</a></button><br><br>
                 </div>
             </div>
         </form>
@@ -106,15 +106,15 @@
                   <form class="needs-validation" novalidate>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label for="firstName">First name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <label for="firstName">Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Facebook" value="" required>
                         <div class="invalid-feedback">
                           Valid first name is required.
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label for="lastName">Last name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <label for="lastName">Acronym</label>
+                        <input type="text" class="form-control" id="Acronym" placeholder="FB" value="" required>
                         <div class="invalid-feedback">
                           Valid last name is required.
                         </div>
@@ -136,6 +136,16 @@
                         Please enter your shipping address.
                       </div>
                     </div>
+
+                    <div class="mb-3">
+                      <label for="latitude">Longitud y Latitud</label>
+                      <input type="text" class="form-control" id="latitude" placeholder="">
+                      <div class="invalid-feedback">
+                        Please enter your Latitude and longitude
+                      </div>
+                    </div>
+                    
+                    
 
                     <iframe width="485" height="300" src="https://api.maptiler.com/maps/streets/?key=sZ4W39S9t1hxOkDp3BOw#0.8/23.02552/-3.05015"></iframe>
                     <div class="row">
@@ -217,7 +227,7 @@
                       </div>
                     </div>
                    
-                    <button class="btn btn-danger btn-lg btn-block" type="submit">Registrarse</button><br>
+                    <button class="btn btn-danger btn-lg btn-block" type="submit"><a href="home-business.html">Registrarse</a></button><br>
                   </form>
                 </div>
               </div>
@@ -226,6 +236,8 @@
     </div>
     <br><br><br><br>
 
+   
     <script src="../js/controlador.js"></script>
+    
 </body>
 </html>
