@@ -41,13 +41,15 @@
                     </div>
                   </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
+              <form class="form-inline my-2 my-lg-0" id="searchform">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+                <ul id="name" class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
               </form>
-              <button class="btn btn-danger" id="btn-login">Login</button>
-              <button class="btn btn-danger" id="btn-signup">Signup</button>
-            </div>
+              <div id="btn-log">
+                <button class="btn btn-danger" id="btn-login" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button class="btn btn-danger" id="btn-signup">Signup</button>
+              </div>
           </nav>
     </div><br>
         
@@ -56,255 +58,11 @@
         <h2>Goodprom</h2>
         <p>Las mejores promociones con grandes beneficios.</p><hr>
     </div>
-    <div class="container-fluid" id="cards">
-        <h3>Hogar</h3>
-        <div class="row">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <hr>
-    </div>
-
-    <div class="container-fluid">
-        <h3>Deportes</h3>
-        <div class="row">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/Pelota.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Balon de Futbol</h4>
-                        <p>Lorem, ipsum dolor rem quos qui sint quisquam soluta quaerat expedita sapiente quia? At officia ut in?</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/Pelota.svg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Balon de Futbol</h4>
-                        <p>Lorem necessitatibus impedit alias hic ipsa velit rem quos qui sint quisquam soluta quaerat expedita sapiente quia? At officia ut in?</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/Pelota.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Balon de Futbol</h4>
-                        <p>Lorem, ipsum impedit alias hic ipsa velit rem quos qui sint quisquam soluta quaerat expedita sapiente quia? At officia ut in?</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/Pelota.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Balon de Futbol</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, perferendis Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-    </div>
-
-    <div class="container-fluid" id="cards">
-        <h3>Hogar</h3>
-        <div class="row">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <ul>
-                            <li>15% Descuento los dias Miercoles</li>
-                            <li id="business">
-                                Pizza Hut
-                            </li>
-                            <li><i class="fas fa-tags"></i>30 disponibles</li>
-                            <li>Antes L.4000</li>
-                            <li id="price">L.2000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <hr>
-    </div>
-
-    <div class="container-fluid">
-        <h3>Hogar</h3>
-        <div class="row">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Juego de muebles</h4>
-                        <p>Lorem, ipsum dolor rem quos qui sint quisquam soluta quaerat expedita sapiente quia? At officia ut in?</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Juego de muebles</h4>
-                        <p>Lorem necessitatibus impedit alias hic ipsa velit rem quos qui sint quisquam soluta quaerat expedita sapiente quia? At officia ut in?</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Juego de muebles</h4>
-                        <p>Lorem, ipsum impedit alias hic ipsa velit rem quos qui sint quisquam soluta quaerat expedita sapiente quia? At officia ut in?</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card shadow bg-white rounded">
-                    <img src="../img/mueble.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-tittle">Juego de muebles</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, perferendis Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
+    <div class="container-fluid"> 
+        <div class="container-fluid" id="cards">
+            <h3 id="home-category">Hogar</h3>
+            <div class="row" id="home"></div>
+        </div>        
     </div>
 
     <div id="footer" class="footer">
@@ -335,11 +93,43 @@
         </div>
     </div>
 
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #12103D;color: white;">
+              <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="ml-auto mr-auto">
+                    <button class="btn-sm btn-danger">User</button>
+                    <button class="btn-sm btn-danger">Business</button>
+                </div><br>
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input id="username" type="text" class="form-control" placeholder="@username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input id="password" type="password" class="form-control" placeholder="password">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" onclick="userValidation()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../js/home.js"></script>
 </body>
 </html>

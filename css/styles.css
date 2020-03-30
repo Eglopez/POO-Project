@@ -411,6 +411,7 @@ a:active{
     background-color: whitesmoke;
 }
 
+
 #navhome .business{
     font-weight: 500;
 }
@@ -424,6 +425,9 @@ a:active{
 -------User profile----------
 */
 
+#profile{
+    background-color: whitesmoke;
+}
 
 .emp-profile{
     padding: 3%;
@@ -525,9 +529,7 @@ a:active{
     color: #F20231;
 }
 
-#profile{
-    background-color: whitesmoke;
-}
+
 
 /*
 ---------Dashboard----------
