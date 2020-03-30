@@ -112,14 +112,16 @@ var users = [
                         prom: "Los mejores muebles para tu hogar",
                         previous_price:"L.30,000",
                         price:"L.26,455",
-                        img: "../img/muebles.jpg"
+                        img: "../img/mueble.jpg",
+                        amount: 25
                     },
                     {
                       name: "Muebles",
                       prom: "Los mejores muebles para tu hogar",
                       previous_price:"L.30,000",
                       price:"L.26,455",
-                      img: "../img/muebles.jpg"
+                      img: "../img/mueble.jpg",
+                      amount: 30
                     }
                     
                 ]
@@ -132,14 +134,16 @@ var users = [
                         prom: "Los mejores muebles para tu hogar",
                         previous_price:"L.30,000",
                         price:"L.26,455",
-                        img: "../img/muebles.jpg"
+                        img: "../img/mueble.jpg",
+                        amount: 50
                     },
                     {
                       name: "Muebles",
                       prom: "Los mejores muebles para tu hogar",
                       previous_price:"L.30,000",
                       price:"L.26,455",
-                      img: "../img/muebles.jpg"
+                      img: "../img/mueble.jpg",
+                      amount: 43
                   }
                 ]
             },
@@ -214,11 +218,11 @@ var users = [
         `;
         document.getElementById('home').innerHTML = '';
         for(let j=0;j<categories.length;j++){
-          if(categories[i].name== 'Hogar'){
-            for(let k=0;k<categories[i].business.length;k++){
-              var busi = categories[i].business;
-              for(let l=0;l<busi[k].products;l++){
-                var product = busi[k].products;
+          if(categories[j].category == 'Hogar'){
+            for(let k=0;k<categories[j].business.length;k++){
+              var busi = categories[j].business[k];
+              for(let l=0;l<busi.products.length;l++){
+                var product = busi.products[l];
                 document.getElementById('home').innerHTML +=
                 `
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -228,9 +232,9 @@ var users = [
                           <ul>
                               <li>${product.prom}</li>
                               <li id="business">
-                                  ${busi.name}
+                                 ${busi.name}
                               </li>
-                              <li><i class="fas fa-tags"></i>30 disponibles</li>
+                              <li><i class="fas fa-tags"></i>${product.amount}</li>
                               <li>${product.previous_price}</li>
                               <li id="price">${product.price}</li>
                           </ul>
@@ -249,3 +253,4 @@ var users = [
       }
     }
   }
+

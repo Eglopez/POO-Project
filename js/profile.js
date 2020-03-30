@@ -1,1 +1,1 @@
-console.log(ayuda);
+console.log(res);
