@@ -2,11 +2,12 @@ var users = [
     {
       name:"Eduardo",
       lastname:"Lopez",
-      username:"Eduardo Lopez",
+      username:"Eduardo",
       email:"eduardolopezlainez2001@gmail.com",
       password:"asd.123",
       phone_number:"+504 9853-6822",
-      sex:"male"
+      sex:"male",
+      img:"../img/client3.jpg"
     },
     {
       name:"Rosa",
@@ -15,7 +16,8 @@ var users = [
       email:"rosanchz@gmail.com",
       password:"asd.456",
       phone_number:"+504 9822-3689",
-      sex:"female"
+      sex:"female",
+      img:"../img/client.svg"
     },
     {
       name:"Mario",
@@ -24,7 +26,8 @@ var users = [
       email:"mafer99@gmail.com",
       password:"asd.789",
       phone_number:"+504 3422-7681",
-      sex:"male"
+      sex:"male",
+      img:"../img/client2.jpg"
     }
   ];
   
@@ -119,6 +122,47 @@ for(let i=0;i<users.length;i++){
           </div>
         </li>
         `;
+        document.getElementById('profile-img').innerHTML =
+        `
+        <img src="${users[i].img}">
+        <div class="file btn btn-lg btn-danger">
+            Change Photo
+            <input type="file" name="file">
+        </div>
+        `;
+        document.getElementById('profile-header').innerHTML =
+        `
+        <h5>
+            ${users[i].name} ${users[i].lastname}
+        </h5>
+        <h6>
+            Web Developer and Designer
+        </h6>
+        <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+            </li>
+        </ul>
+        `;
+
+        document.getElementById('profile-username').innerHTML =
+        `
+        <p>${users[i].username}</p>
+        `;
+        document.getElementById('profile-name').innerHTML =
+        `
+        <p>${users[i].name}</p>
+        `;
+        document.getElementById('profile-email').innerHTML =
+        `
+        <p>${users[i].email}</p>
+        `;
+        document.getElementById('profile-phone').innerHTML =
+        `
+        <p>${users[i].phone_number}</p>
+        `;
+
 
     }
 }
