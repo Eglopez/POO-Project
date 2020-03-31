@@ -1,7 +1,4 @@
 
-
-
-
 function showBusinessForm(){
     document.getElementById('userForm').style.display = 'none';
     document.getElementById('businessForm').style.display = 'block';
