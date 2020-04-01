@@ -229,7 +229,7 @@ function homeUser(){
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="user">
             <a class="dropdown-item" href="user-profile.html"><i class="fas fa-user text-danger"></i>Perfil</a>
             <a class="dropdown-item" href="#"><i class="fas fa-heart text-danger"></i>Favoritos</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-cart-arrow-down text-danger text-danger"></i>Compras</a>
+            <a class="dropdown-item" href="sales.html"><i class="fas fa-cart-arrow-down text-danger text-danger"></i>Compras</a>
             <a class="dropdown-item" href="../index.html"><i class="fas fa-sign-out-alt text-danger"></i>Cerrar sesion</a>
           </div>
         </li>
@@ -264,8 +264,10 @@ function homeUser(){
               }
             }
           }else if(categories[j].category == 'Deportes'){
+            document.getElementById('sports').innerHTML='';
             for(let k=0;k<categories[j].business.length;k++){
               var busi = categories[j].business[k];
+              
               for(let l=0;l<busi.products.length;l++){
                 var product = busi.products[l];
                 document.getElementById('sports').innerHTML +=
