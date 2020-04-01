@@ -112,7 +112,7 @@ for(let i=0;i<users.length;i++){
         `
         <li class="nav-item dropdown" id="user-name">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user">${users[i].username}</i>
+            <i class="fas fa-user"> ${users[i].username}</i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="user">
             <a class="dropdown-item" href="user-profile.html"><i class="fas fa-user text-danger"></i>Perfil</a>

@@ -217,14 +217,14 @@ var users = [
   }
 
 
-  function homeUser(){
+function homeUser(){
     for(let i=0;i<users.length;i++){
       if(users[i].username==document.cookie){
         document.getElementById('btn-log').style.display = 'none';
         document.getElementById('name').innerHTML = `
         <li class="nav-item dropdown" id="user-name">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user">${users[i].username}</i>
+            <i class="fas fa-user"> ${users[i].username}</i>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="user">
             <a class="dropdown-item" href="user-profile.html"><i class="fas fa-user text-danger"></i>Perfil</a>
@@ -296,3 +296,68 @@ var users = [
     }
   }
 homeUser();
+
+function home(){
+  for(let i=0;i<users.length;i++){
+    document.getElementById('sports').innerHTML='';
+    document.getElementById('home').innerHTML = '';
+    for(let j=0;j<categories.length;j++){
+      if(categories[j].category == 'Hogar'){
+        for(let k=0;k<categories[j].business.length;k++){
+          var busi = categories[j].business[k];
+          for(let l=0;l<busi.products.length;l++){
+            var product = busi.products[l];
+            document.getElementById('home').innerHTML +=
+            `
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="card shadow bg-white rounded">
+                  <img src="${product.img}" class="card-img-top">
+                  <div class="card-body">
+                      <ul>
+                          <li>${product.prom}</li>
+                          <li id="business">
+                             ${busi.name}
+                          </li>
+                          <li><i class="fas fa-tags"></i>${product.amount}</li>
+                          <li>${product.previous_price}</li>
+                          <li id="price">${product.price}</li>
+                          <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+            `;
+          }
+        }
+      }else if(categories[j].category == 'Deportes'){
+        for(let k=0;k<categories[j].business.length;k++){
+          var busi = categories[j].business[k];
+          for(let l=0;l<busi.products.length;l++){
+            var product = busi.products[l];
+            document.getElementById('sports').innerHTML +=
+            `
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="card shadow bg-white rounded">
+                  <img src="${product.img}" class="card-img-top">
+                  <div class="card-body">
+                      <ul>
+                          <li>${product.prom}</li>
+                          <li id="business">
+                             ${busi.name}
+                          </li>
+                          <li><i class="fas fa-tags"></i>${product.amount}</li>
+                          <li>${product.previous_price}</li>
+                          <li id="price">${product.price}</li>
+                          <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+            `;
+          }
+        }
+      }
+    }
+  }
+}
+ home();

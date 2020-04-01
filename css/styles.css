@@ -429,6 +429,10 @@ a:active{
     background-color: whitesmoke;
 }
 
+.btn-pd{
+    margin-top: 5px;
+}
+
 .emp-profile{
     padding: 3%;
     margin-top: 3%;
@@ -630,3 +634,12 @@ a:active{
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   }
+
+  .dropdown-item:hover{
+    background-color: whitesmoke;
+    
+  }
+  .dropdown-item:visited{
+      color: black;
+  }
+ 
