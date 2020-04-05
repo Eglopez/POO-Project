@@ -43,10 +43,16 @@
                 <div class="col">
                     <label for="formname">Name</label> 
                     <input type="text" class="form-control" placeholder="First name" id="formname">
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Your name is required.
+                    </div>
                 </div>
                 <div class="col">
                     <label for="formlastname">Lastname</label>
                    <input type="text" class="form-control" placeholder="Last name" id="formlastname">
+                   <div class="invalid-feedback" style="width: 100%;">
+                    Your lastname is required.
+                  </div>
                 </div>
             </div>
             <div class="mb-3">
@@ -69,10 +75,13 @@
                 <div>
                     <label for="password">Password</label>
                     <input type="password" class="form-control" placeholder="password" id="password">
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Your password is required.
+                    </div>
                 </div>
                 <div>
                     <label for="confirmpassword">Confirm Password</label>
-                    <input type="password" class="form-control" placeholder="password" id="confirmpassword">
+                    <input type="password" class="form-control" placeholder="password" id="confirmpassword" onkeyup="confirmPasswordValidation(this)">
                 </div>
                 
             </div>
@@ -95,7 +104,7 @@
             </div><br>
             <div class="row">
                 <div class="mr-auto ml-auto">
-                    <button type="button" class="btn btn-lg btn-danger" id="sign"><a href="home-user.html">Registrarse</a></button><br><br>
+                    <button type="submit" class="btn btn-lg btn-danger" id="sign" onclick="loginUser()"><a href="home.html">Registrarse</a></button><br><br>
                 </div>
             </div>
         </form>
@@ -123,7 +132,7 @@
                     
                     <div class="mb-3">
                       <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com" >
                       <div class="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                       </div>
@@ -227,7 +236,7 @@
                       </div>
                     </div>
                    
-                    <button class="btn btn-danger btn-lg btn-block" type="submit"><a href="home-business.html">Registrarse</a></button><br>
+                  <button class="btn btn-danger btn-lg btn-block" type="submit" onclick="login()"><a href="home.html">Registrarse</a></button><br>
                   </form>
                 </div>
               </div>

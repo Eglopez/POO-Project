@@ -106,21 +106,42 @@
             </div>
             <div class="modal-body">
                 <div class="ml-auto mr-auto">
-                    <button class="btn-sm btn-danger">User</button>
-                    <button class="btn-sm btn-danger">Business</button>
+                    <button class="btn-sm btn-danger" onclick="userLogin()">User</button>
+                    <button class="btn-sm btn-danger" onclick="businessLogin()">Business</button>
                 </div><br>
-                <div class="form-group">
+
+
+                <div id="formlogin-user">
+                  <div class="form-group">
                     <label for="username">Usuario</label>
                     <input id="username" type="text" class="form-control" placeholder="@username">
-                </div>
-                <div class="form-group">
+                  </div>
+                  <div class="form-group">
                     <label for="password">Contraseña</label>
                     <input id="password" type="password" class="form-control" placeholder="password">
+                  </div>
                 </div>
+
+                <div id="formlogin-business" style="display: none;">
+                  <div class="form-group">
+                    <label for="business-name">Empresa:</label>
+                    <input type="text" id="business-name" class="form-control" placeholder="Nombre Empresa">
+                  </div>
+                  <div class="form-group">
+                    <label for="business-password">Contraseña:</label>
+                    <input type="password" id="business-password" class="form-control" placeholder="Ingrese contraseña">
+                  </div>
+                </div>
+
+
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" id="btnlogin-user">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button id="login" type="button" class="btn btn-danger" onclick="userValidation()">Save changes</button>
+              <button id="login" type="button" class="btn btn-danger" onclick="userValidation()">Login</button>
+            </div>
+            <div class="modal-footer" id="btnlogin-business" style="display: none;">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="login" type="button" class="btn btn-danger" onclick="businessValidation()">Login</button>
             </div>
           </div>
         </div>
