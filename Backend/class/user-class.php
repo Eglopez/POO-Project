@@ -15,7 +15,7 @@ class User{
         $last_name,
         $user_name,
         $email,
-        $password,
+        $password
     ){
         $this->id = $id;
         $this->name = $name;
