@@ -1,0 +1,12 @@
+{
+    "name": "eglop/firebase",
+    "authors": [
+        {
+            "name": "Eglopez",
+            "email": "eduardolopezlainez2001@gmail.com"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "^5.1"
+    }
+}
