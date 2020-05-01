@@ -10,6 +10,7 @@
     switch($_SERVER['REQUEST_METHOD']){
 
         case 'POST':
+            
             $user = new User(
                 $_POST['name'],
                 $_POST['last_name'],
@@ -17,25 +18,40 @@
                 $_POST['email'],
                 $_POST['password'],
                 $_POST['confirm_password'],
-                $_POST['gender']    
+                $_POST['gender']  
             );
             echo $user->addUser($database->getDB());
+              
         break;
 
         case 'GET':
             if(isset($_GET['id'])){
-                User::getUser($_GET['id']);
+                User::getUser($database->getDB(),$_GET['id']);
             }else{
-                User::getUsers();
+                User::getUsers($database->getDB());
             }
         break;
 
         case 'PUT':
-            //Update User
+            $_PUT = array();
+            if(isset($_GET['id'])){
+                parse_str(file_get_contents("php://input"),$_PUT);
+                $user = new User(
+                    $_PUT['name'],
+                    $_PUT['last_name'],
+                    $_PUT['user_name'],
+                    $_PUT['email'],
+                    $_PUT['password'],
+                    $_PUT['confirm_password'],
+                    $_PUT['gender']    
+                );
+                echo $user->updateUser($database->getDB(),$_GET['id']); 
+            }
         break;
 
         case 'DELETE':
-            //Delete User
+            if(isset($_GET['id']))
+                User::deleteUser($database->getDB(),$_GET['id']);
         break;
     }
 

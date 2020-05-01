@@ -172,6 +172,10 @@ class User{
         return $this;
     }
 
+    public function __toString(){
+        return json_encode($this->getData());
+    }
+
     public function addUser($db){
         $users = $this->getData(); 
         $data = $db->getReference('users')
@@ -181,6 +185,40 @@ class User{
                 return '{"mensaje":"Usuario almacenado","key":"'.   $data->getKey().'"}';
             else
                 return '{"mensaje":"Error al almacenar usuario"}';          
+    }
+
+    public function updateUser($db,$id){
+        $data = $db->getReference('users')
+            ->getChild($id)
+            ->set($this->getData());
+
+        if($data->getKey() != null)
+            return '{"mensaje":"Usuario actualizado","key":"'.   $data->getKey().'"}';
+        else
+            return '{"mensaje":"Error al actualizar usuario"}';      
+
+    }
+
+    public static function deleteUser($db,$id){
+        $db->getReference('users')
+            ->getChild($id)
+            ->remove();
+            
+    }
+
+    public static function getUser($db,$id){
+        $data = $db->getReference('users')
+            ->getChild($id)
+            ->getValue();
+
+        echo json_encode($data);    
+    }
+
+    public static function getUsers($db){
+        $data = $db->getReference('users')
+            ->getSnapshot()
+            ->getValue();
+        echo json_encode($data);    
     }
 
     public function getData(){
