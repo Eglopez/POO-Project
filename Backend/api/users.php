@@ -15,11 +15,13 @@
                 $_POST['name'],
                 $_POST['last_name'],
                 $_POST['user_name'],
-                $_POST['email'],
+                $_POST['email_address'],
                 $_POST['password'],
                 $_POST['confirm_password'],
+                $_POST['phone_number'],
                 $_POST['gender']  
             );
+            echo $_POST['email_address'];
             echo $user->addUser($database->getDB());
               
         break;
@@ -40,9 +42,10 @@
                     $_PUT['name'],
                     $_PUT['last_name'],
                     $_PUT['user_name'],
-                    $_PUT['email'],
+                    $_PUT['email_address'],
                     $_PUT['password'],
                     $_PUT['confirm_password'],
+                    $_PUT['phone_number'],
                     $_PUT['gender']    
                 );
                 echo $user->updateUser($database->getDB(),$_GET['id']); 

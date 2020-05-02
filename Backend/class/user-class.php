@@ -4,9 +4,10 @@ class User{
     private $name;
     private $last_name;
     private $user_name;
-    private $email;
+    private $email_address;
     private $password;
     private $confirm_password;
+    private $phone_number;
     private $gender;
 
 
@@ -15,18 +16,20 @@ class User{
         $name,
         $last_name,
         $user_name,
-        $email,
+        $email_address,
         $password,
         $confirm_password,
+        $phone_number,
         $gender
     ){
         
         $this->name = $name;
         $this->last_name = $last_name;
         $this->user_name = $user_name;
-        $this->emal = $email;
+        $this->email_address = $email_address;
         $this->password = $password;
         $this->confirm_password = $confirm_password;
+        $this->phone_number = $phone_number;
         $this->gender = $gender;
     }
 
@@ -95,9 +98,9 @@ class User{
     /**
      * Get the value of email
      */ 
-    public function getEmail()
+    public function getEmail_address()
     {
-        return $this->email;
+        return $this->email_address;
     }
 
     /**
@@ -105,9 +108,10 @@ class User{
      *
      * @return  self
      */ 
-    public function setEmail($email)
+    public function setEmail_address($email_address)
     {
-        $this->email = $email;
+        $this->email_address = $email_address;
+
 
         return $this;
     }
@@ -148,6 +152,27 @@ class User{
     public function setConfirm_password($confirm_password)
     {
         $this->confirm_password = $confirm_password;
+
+        return $this;
+    }
+
+
+    /**
+     * Get the value of phone_number
+     */ 
+    public function getPhone_number()
+    {
+        return $this->phone_number;
+    }
+
+    /**
+     * Set the value of phone_number
+     *
+     * @return  self
+     */ 
+    public function setPhone_number($phone_number)
+    {
+        $this->phone_number = $phone_number;
 
         return $this;
     }
@@ -225,9 +250,10 @@ class User{
         $data['name'] = $this->name;
         $data['last_name'] = $this->last_name;
         $data['user_name'] = $this->user_name;
-        $data['email'] = $this->email;
+        $data['email_address'] = $this->email_address;
         $data['password'] = $this->password;
         $data['confirm_password'] = $this->confirm_password;
+        $data['phone_number'] = $this->phone_number;
         $data['gender']  = $this->gender;
         return $data;
     }
