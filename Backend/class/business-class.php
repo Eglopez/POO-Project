@@ -5,7 +5,7 @@ class Business{
     private $name;
     private $acronym;
     private $email;
-    private $adress;
+    private $address;
     private $latitude;
     private $country;
     private $state;
@@ -21,7 +21,7 @@ class Business{
         $name,
         $acronym,
         $email,
-        $adress,
+        $address,
         $latitude,
         $country,
         $state,
@@ -35,7 +35,7 @@ class Business{
         $this->name = $name;
         $this->acronym = $acronym;
         $this->email = $email;
-        $this->adress = $adress;
+        $this->address = $address;
         $this->latitude = $latitude;
         $this->country = $country;
         $this->state = $state;
@@ -108,21 +108,21 @@ class Business{
     }
 
     /**
-     * Get the value of adress
+     * Get the value of address
      */ 
-    public function getAdress()
+    public function getAddress()
     {
-        return $this->adress;
+        return $this->address;
     }
 
     /**
-     * Set the value of adress
+     * Set the value of address
      *
      * @return  self
      */ 
-    public function setAdress($adress)
+    public function setAddress($address)
     {
-        $this->adress = $adress;
+        $this->address = $address;
 
         return $this;
     }
@@ -306,6 +306,76 @@ class Business{
 
         return $this;
     }
+
+    public function __toString(){
+        return json_encode($this->getData());
+    }
+
+    public function addBusiness($db){
+        $business = $this->getData(); 
+        $data = $db->getReference('business')
+            ->push($business);
+        
+            if($data->getKey() != null)
+                return '{"mensaje":"Empresa almacenada","key":"'.   $data->getKey().'"}';
+            else
+                return '{"mensaje":"Error al almacenar Empresa"}';          
+    }
+
+    public function updateBusiness($db,$id){
+        $data = $db->getReference('business')
+            ->getChild($id)
+            ->set($this->getData());
+
+        if($data->getKey() != null)
+            return '{"mensaje":"Usuario actualizado","key":"'.   $data->getKey().'"}';
+        else
+            return '{"mensaje":"Error al actualizar usuario"}';      
+
+    }
+
+    public static function deleteBusiness($db,$id){
+        $db->getReference('business')
+            ->getChild($id)
+            ->remove();
+            
+    }
+
+    public static function getBusines($db,$id){
+        $data = $db->getReference('business')
+            ->getChild($id)
+            ->getValue();
+
+        echo json_encode($data);    
+    }
+
+    public static function getBusiness($db){
+        $data = $db->getReference('business')
+            ->getSnapshot()
+            ->getValue();
+        echo json_encode($data);    
+    }
+
+    public function getData(){
+        $data['name'] = $this->name;
+        $data['acronym'] = $this->acronym;
+        $data['email'] = $this->email;
+        $data['latitude'] = $this->latitude;
+        $data['country'] = $this->country;
+        $data['state'] = $this->state;
+        $data['zip'] = $this->zip;
+        $data['payment'] = $this->payment;
+        $data['name_on_card'] = $this->name_on_card;
+        $data['credit_number'] = $this->credit_number;
+        $data['card_expiration'] = $this->card_expiration;
+        $data['card_cvv']  = $this->card_cvv;
+        return $data;
+    }
+
 }
 
+
+
+
 ?>
+
