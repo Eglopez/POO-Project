@@ -23,6 +23,7 @@
             );
             echo $_POST['email_address'];
             echo $user->addUser($database->getDB());
+            
               
         break;
 

@@ -11,7 +11,7 @@ class User{
     private $gender;
 
 
-    function __construct(
+    public function __construct(
 
         $name,
         $last_name,
@@ -207,7 +207,7 @@ class User{
             ->push($users);
         
             if($data->getKey() != null)
-                return '{"mensaje":"Usuario almacenado","key":"'.   $data->getKey().'"}';
+                return '{"mensaje":"Usuario almacenado","key":"'.   $data->getKey().'"}'.json_encode($users);
             else
                 return '{"mensaje":"Error al almacenar usuario"}';          
     }
