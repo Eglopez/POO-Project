@@ -38,6 +38,7 @@ function loginUser(){
     emptyValidation('password');
     emptyValidation('confirmpassword');
     emptyValidation('phone');
+    window.location.href('../pages/home.html');
 }
 
 function login(){

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class User{
     private $name;
@@ -246,12 +247,55 @@ class User{
         echo json_encode($data);    
     }
 
+    public static function userAuthentication($user_name,$password,$db){
+        $data = $db->getReference('users')
+            ->orderByChild('user_name')
+            ->equalTo($user_name)
+            ->getSnapshot()
+            ->getValue();
+
+        $key = array_key_first($data);
+        $authenticated = password_verify($password,$data[$key]['password']);
+        $data['authenticated'] = $authenticated==1?true:false;
+        
+        if($data['authenticated']){
+            $data['key'] = $key;
+            $data['email'] = $data[$key]['email'];
+            $data['token'] = sha1(uniqid(rand(),true));
+            $_SESSION['token'] = $data['token'];
+            setcookie('key', $data['key'],time()+(60*60*24*31),'/');
+            setcookie('email', $data['email'],time()+(60*60*24*31),'/');
+            setcookie('tokem', $data['token'],time()+(60*60*24*31),'/');
+
+            $db->getReference('users/'.$key.'/token')
+                ->set($data['token']);
+            
+        }
+        
+        echo json_encode($data);    
+    }
+
+    public static function verificateAuthentication($db){
+        if(isset($_COOKIE['key']))
+            return false;
+
+        $data = $db->getReference('users')
+            ->getChild($_COOKIE['key'])
+            ->getValue();
+
+        if($data['token'] == $_COOKIE['token'] && $_SESSION['token'] == $_COOKIE['token']){
+            return true;
+        }else{
+            return false;
+        }    
+    }
+
     public function getData(){
         $data['name'] = $this->name;
         $data['last_name'] = $this->last_name;
         $data['user_name'] = $this->user_name;
         $data['email_address'] = $this->email_address;
-        $data['password'] = $this->password;
+        $data['password'] = sha1($this->password);
         $data['confirm_password'] = $this->confirm_password;
         $data['phone_number'] = $this->phone_number;
         $data['gender']  = $this->gender;

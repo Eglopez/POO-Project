@@ -202,19 +202,19 @@ var users = [
   ];
 
   function userValidation(){
-    for(let i=0;i<users.length;i++){
-      if(users[i].username==document.getElementById('username').value && users[i].password==document.getElementById('password').value){
-        console.log(users[i]);
-        document.cookie = encodeURIComponent(document.getElementById('username').value);
-        console.log(document.cookie);
-        homeUser();
-        
-        $('#loginModal').modal('hide');        
-        
-      }else{
-        $('#loginModal').modal('show');
+    axios({
+      url:"../../Backend/api/login.php",
+      method:"post",
+      responseType: "json",
+      data:{
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
       }
-    }
+    }).then(res=>{
+      console.log(res);
+    }).catch(err =>{
+      console.error(err);
+    });
   }
 
   function businessValidation(){
