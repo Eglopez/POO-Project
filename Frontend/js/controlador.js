@@ -9,6 +9,17 @@ function showUserForm(){
     document.getElementById('businessForm').style.display = 'none';
 }
 
+function radioButtonValue(){
+    let radio_value = document.getElementsByName('inlineRadioOptions');
+
+    for(let i=0;i<radio_value.length;i++){
+        if(radio_value[i].cheked){
+            radio_value[i].value;
+            break;
+        }
+    }
+}
+
 
 function emptyValidation(id){
     if (document.getElementById(id).value == ''){
@@ -31,14 +42,33 @@ function confirmPasswordVlidation(){
 }
 
 function loginUser(){
-    emptyValidation('formname');
-    emptyValidation('formlastname');
-    emptyValidation('username');
-    emptyValidation('email');
-    emptyValidation('password');
-    emptyValidation('confirmpassword');
-    emptyValidation('phone');
-    window.location.href('../pages/home.html');
+
+    user ={
+        name: document.getElementById('formname').value,
+        last_name: document.getElementById('formlastname').value,
+        user_name: document.getElementById('username').value,
+        email_address: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        confirm_password: document.getElementById('confirmpassword').value,
+        phone_number: document.getElementById('phone').value,
+        gender: document.getElementById('male').value
+
+    };
+
+    axios({
+        
+        url: "../../Backend/api/users.php",
+        method: "post",
+        responseType: "json",
+        data: user
+    }).then(res => {
+        console.log(res);
+        window.location.assign('../pages/home.html');
+    }).catch(err =>{
+        console.error(err);
+    });
+   // window.location.assign('../pages/home.html');
+   
 }
 
 function login(){

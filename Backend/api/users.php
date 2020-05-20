@@ -6,14 +6,13 @@
     require_once('../class/database-class.php');
 
     $database = new Database();
+    $_POST = json_decode(file_get_contents('php://input'),true);
 
     switch($_SERVER['REQUEST_METHOD']){
 
         case 'POST':
 
-            if(!User::verificateAuthentication($db->getDB())){
-                echo '{"mensaje":""Acceso no Autorizado}';
-            }
+            
             
             $user = new User(
                 $_POST['name'],

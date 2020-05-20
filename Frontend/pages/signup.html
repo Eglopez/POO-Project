@@ -56,16 +56,11 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="username">Username</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">@</span>
-                  </div>
-                  <input type="text" class="form-control" id="username" placeholder="Username" required>
-                  <div class="invalid-feedback" style="width: 100%;">
-                    Your username is required.
-                  </div>
-                </div>
+              <label for="formlastname">Username</label>
+              <input type="text" class="form-control" placeholder="@Username" id="username">
+              <div class="invalid-feedback" style="width: 100%;">
+               Your lastname is required.
+             </div>
             </div>      
             <div class="form-group">
                 <div>
@@ -81,7 +76,7 @@
                 </div>
                 <div>
                     <label for="confirmpassword">Confirm Password</label>
-                    <input type="password" class="form-control" placeholder="password" id="confirmpassword" onkeyup="confirmPasswordValidation(this)">
+                    <input type="password" class="form-control" placeholder="password" id="confirmpassword">
                 </div>
                 
             </div>
@@ -91,13 +86,13 @@
                     <label for="phone">Phone number</label>
                     <input type="text" placeholder="(+504)" id="phone" class="form-control">
                 </div>
-                <div class="col">
+                <div class="col" id="btnradio">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male" checked>
                         <label class="form-check-label" for="inlineRadio1">Male</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
                         <label class="form-check-label" for="inlineRadio2">Female</label>
                     </div>
                 </div>
@@ -236,7 +231,7 @@
                       </div>
                     </div>
                    
-                  <button class="btn btn-danger btn-lg btn-block" type="submit" onclick="login()"><a href="home.html">Registrarse</a></button><br>
+                    <button class="btn btn-danger btn-lg btn-block" type="submit" onclick="login()"><a href="home.html">Registrarse</a></button><br>
                   </form>
                 </div>
               </div>

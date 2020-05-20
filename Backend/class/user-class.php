@@ -256,23 +256,24 @@ class User{
 
         $key = array_key_first($data);
         $authenticated = password_verify($password,$data[$key]['password']);
-        $data['authenticated'] = $authenticated==1?true:false;
+        $response['authenticated'] = $authenticated==1?true:false;
         
-        if($data['authenticated']){
-            $data['key'] = $key;
-            $data['email'] = $data[$key]['email'];
-            $data['token'] = sha1(uniqid(rand(),true));
-            $_SESSION['token'] = $data['token'];
-            setcookie('key', $data['key'],time()+(60*60*24*31),'/');
-            setcookie('email', $data['email'],time()+(60*60*24*31),'/');
-            setcookie('tokem', $data['token'],time()+(60*60*24*31),'/');
+        if($response['authenticated']){
+            $response['key'] = $key;
+            $response['user_name'] = $data[$key]['user_name'];
+            $response['token'] = bin2hex(openssl_random_pseudo_bytes(16));
+
+            setcookie('key', $response['key'],time()+(60*60*24*31),'/');
+            setcookie('user_name', $response['user_name'],time()+(60*60*24*31),'/');
+            setcookie('token', $response['token'],time()+(60*60*24*31),'/');
+           
 
             $db->getReference('users/'.$key.'/token')
-                ->set($data['token']);
+                ->set($response['token']);
             
         }
-        
-        echo json_encode($data);    
+       
+        echo json_encode($response);    
     }
 
     public static function verificateAuthentication($db){
@@ -283,7 +284,7 @@ class User{
             ->getChild($_COOKIE['key'])
             ->getValue();
 
-        if($data['token'] == $_COOKIE['token'] && $_SESSION['token'] == $_COOKIE['token']){
+        if($response['token'] == $_COOKIE['token'] && $_SESSION['token'] == $_COOKIE['token']){
             return true;
         }else{
             return false;
@@ -295,8 +296,8 @@ class User{
         $data['last_name'] = $this->last_name;
         $data['user_name'] = $this->user_name;
         $data['email_address'] = $this->email_address;
-        $data['password'] = sha1($this->password);
-        $data['confirm_password'] = $this->confirm_password;
+        $data['password'] = password_hash($this->password,PASSWORD_DEFAULT);
+        $data['confirm_password'] = password_hash($this->confirm_password,PASSWORD_DEFAULT);
         $data['phone_number'] = $this->phone_number;
         $data['gender']  = $this->gender;
         return $data;

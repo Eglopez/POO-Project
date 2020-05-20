@@ -5,13 +5,18 @@
     require_once('../class/database-class.php');
 
     $database = new Database();
+    $_POST = json_decode(file_get_contents('php://input'),true);
 
 
     switch($_SERVER['REQUEST_METHOD']){
 
         case 'POST':
             
-          echo  User::userAuthentication($_POST['user_name'],$_POST['password'],$database->getDB());
+           User::userAuthentication($_POST['user_name'],$_POST['password'],$database->getDB());
+          
+         
+
+          
             
               
         break;
