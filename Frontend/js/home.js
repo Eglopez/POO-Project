@@ -1,32 +1,3 @@
-var users = [
-    {
-      name:"Eduardo",
-      lastname:"Lopez",
-      username:"Eduardo",
-      email:"eduardolopezlainez2001@gmail.com",
-      password:"asd.123",
-      phone_number:"+504 9853-6822",
-      sex:"male"
-    },
-    {
-      name:"Rosa",
-      lastname:"Sanchez",
-      username:"Rosa",
-      email:"rosanchz@gmail.com",
-      password:"asd.456",
-      phone_number:"+504 9822-3689",
-      sex:"female"
-    },
-    {
-      name:"Mario",
-      lastname:"Fernandez",
-      username:"Mafer",
-      email:"mafer99@gmail.com",
-      password:"asd.789",
-      phone_number:"+504 3422-7681",
-      sex:"male"
-    }
-  ];
   
   var business = [
     {
@@ -202,14 +173,23 @@ var users = [
   ];
 
   function userValidation(){
+
+    
+
+    form_data = {
+      user_name: document.getElementById('username').value,
+      password: document.getElementById('password').value
+    }
+    
+    console.log(document.getElementById('username').value);
+    console.log(document.getElementById('password').value)
+
     axios({
       url:"../../Backend/api/login.php",
       method:"post",
       responseType: "json",
-      data:{
-        username: document.getElementById('username').value,
-        password: document.getElementById('password').value
-      }
+      headers: {'Content-Type': 'multipart/form-data' },
+      data:form_data
     }).then(res=>{
       console.log(res);
       

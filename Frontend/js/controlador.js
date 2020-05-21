@@ -43,31 +43,39 @@ function confirmPasswordVlidation(){
 
 function loginUser(){
 
-    user ={
-        name: document.getElementById('formname').value,
-        last_name: document.getElementById('formlastname').value,
-        user_name: document.getElementById('username').value,
-        email_address: document.getElementById('email').value,
-        password: document.getElementById('password').value,
-        confirm_password: document.getElementById('confirmpassword').value,
-        phone_number: document.getElementById('phone').value,
-        gender: document.getElementById('male').value
+    
 
-    };
+    user = {
+        name:document.getElementById('formname').value,
+        last_name:document.getElementById('formlastname').value,
+        user_name:document.getElementById('username').value,
+        email_address:document.getElementById('email').value,
+        password:document.getElementById('password').value,
+        confirm_password:document.getElementById('confirmpassword').value,
+        phone_number:document.getElementById('phone').value,
+        gender:document.getElementById('male').value
+    }
+   
+    
+   
 
-    axios({
+    console.log(user);
+
+   /*axios({
         
         url: "../../Backend/api/users.php",
         method: "post",
         responseType: "json",
+        headers: {'Content-Type': 'multipart/form-data' },
         data: user
+        
     }).then(res => {
         console.log(res);
         window.location.assign('../pages/home.html');
     }).catch(err =>{
         console.error(err);
     });
-   // window.location.assign('../pages/home.html');
+   // window.location.assign('../pages/home.html');*/
    
 }
 

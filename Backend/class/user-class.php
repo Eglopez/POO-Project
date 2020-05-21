@@ -256,12 +256,13 @@ class User{
 
         $key = array_key_first($data);
         $authenticated = password_verify($password,$data[$key]['password']);
-        $response['authenticated'] = $authenticated==1?true:false;
+        $response['authenticated'] = $authenticated;
         
         if($response['authenticated']){
             $response['key'] = $key;
             $response['user_name'] = $data[$key]['user_name'];
             $response['token'] = bin2hex(openssl_random_pseudo_bytes(16));
+            $_SESSION['token'] = $response['token'];
 
             setcookie('key', $response['key'],time()+(60*60*24*31),'/');
             setcookie('user_name', $response['user_name'],time()+(60*60*24*31),'/');
@@ -271,6 +272,10 @@ class User{
             $db->getReference('users/'.$key.'/token')
                 ->set($response['token']);
             
+        }else{
+            setcookie('key', $response['key'],time()-10,'/');
+            setcookie('user_name', $response['user_name'],time()-10,'/');
+            setcookie('token', $response['token'],time()-10,'/');
         }
        
         echo json_encode($response);    
