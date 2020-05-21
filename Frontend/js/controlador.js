@@ -43,7 +43,7 @@ function confirmPasswordVlidation(){
 
 function loginUser(){
 
-    
+    console.log(document.getElementById('formname').value);
 
     user = {
         name:document.getElementById('formname').value,
@@ -53,7 +53,7 @@ function loginUser(){
         password:document.getElementById('password').value,
         confirm_password:document.getElementById('confirmpassword').value,
         phone_number:document.getElementById('phone').value,
-        gender:document.getElementById('male').value
+        
     }
    
     
@@ -61,7 +61,7 @@ function loginUser(){
 
     console.log(user);
 
-   /*axios({
+   axios({
         
         url: "../../Backend/api/users.php",
         method: "post",
@@ -71,11 +71,11 @@ function loginUser(){
         
     }).then(res => {
         console.log(res);
-        window.location.assign('../pages/home.html');
+        //window.location.assign('../pages/home.html');
     }).catch(err =>{
         console.error(err);
     });
-   // window.location.assign('../pages/home.html');*/
+   // window.location.assign('../pages/home.html');
    
 }
 
