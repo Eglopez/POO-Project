@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodprom</title>
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../frameworks/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../frameworks/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a7087f00a2.js" crossorigin="anonymous"></script>
+</head>
+<body id="login-body">
+    <div id="navlogin">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.html"><img src="../img/logonav.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="home.html">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="contact.html">Contact</a>
+              </div>
+            </div>
+          </nav>
+    </div><br><br><br> 
+
+
+    
+
+    <div class="container" id=login>
+        <div id="first">
+            <div class="myform form ">
+                <div class="logo mb-3">
+                    <div class="col-md-12 text-danger text-center">
+                       <h1>Login</h1>
+                    </div><br>
+                    <div id="select-login">
+                        <button class="btn-sm btn-danger" onclick="userLogin()">User</button>
+                        <button class="btn-sm btn-danger" onclick="businessLogin()">Business</button>
+                    </div><br>
+               </div>
+               
+              <form id="form-user">
+                      <div class="form-group">
+                         <label for="username" class="text-danger">Username:</label>
+                         <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter Username">
+                      </div>
+                      <div class="form-group">
+                         <label for="password" class="text-danger">Password</label>
+                         <input type="password" id="password"  class="form-control" aria-describedby="passwordHelp" placeholder="Enter Password">
+                      </div><br>
+                      <div class="form-group">
+                         <p class="text-center">By signing up you accept our <a href="#" class="text-danger">Terms Of Use</a></p>
+                      </div>
+                      <div class="col-md-12 text-center ">
+                         <button type="button" class=" btn btn-block mybtn btn-danger tx-tfm" onclick="userValidation()">Login</button>
+                      </div>
+                      
+                      <div class="form-group">
+                         <p class="text-center">Don't have account? <a href="signup.html" id="signup">Sign up here</a></p>
+                      </div>
+                   </form>
+
+                   <form id="form-Business" style="display: none;">
+                    <div class="form-group">
+                       <label for="name" class="text-danger">Name:</label>
+                       <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Business-Name">
+                    </div>
+                    <div class="form-group">
+                       <label for="password-business" class="text-danger">Password</label>
+                       <input type="password" id="password-business"  class="form-control" aria-describedby="passwordHelp" placeholder="Enter Password">
+                    </div><br>
+                    <div class="form-group">
+                       <p class="text-center">By signing up you accept our <a href="#" class="text-danger">Terms Of Use</a></p>
+                    </div>
+                    <div class="col-md-12 text-center ">
+                       <button type="button" class=" btn btn-block mybtn btn-danger tx-tfm" onclick="businessValidation()">Login</button>
+                    </div>
+                    
+                    <div class="form-group">
+                       <p class="text-center">Don't have account? <a href="signup.html" id="signup">Sign up here</a></p>
+                    </div>
+                 </form>
+            
+           </div>
+        </div>
+    </div><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    
+
+
+    <div id="footer" class="footer">
+        <div class="container-fluid">
+            <div class="row pt-4">
+                <div class="col-lg-4 col-md-4">
+                    <h4>Contact us</h4>
+                    <p><i class="fa fa-home" aria-hidden="true">Universidad Nacional Autonoma De Honduras</i></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>eduardolopezlainez2001@gmail.com</p>
+                    <p><i class="fa fa-phone" aria-hidden="true">(+504) 9853-6822</i></p>
+                    <p><i class="fa fa-globe">www.promo.com</i></p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h4>About</h4>
+                    <p><i class="fa fa-square-o">About us</i></p>
+                    <p><i class="fa fa-square-o">Privacy</i></p>
+                    <p><i class="fa fa-square-o">Terms & Conditions</i></p>
+                </div>
+            
+                <div class="col-lg-4 col-md-4">
+                    <h4>Stay in touch</h4>
+                    <i class="social fab fa-facebook" aria-hidden="true"></i>
+                    <i class="social fab fa-twitter" aria-hidden="true"></i>
+                    <i class="social fab fa-instagram" aria-hidden="true"></i>
+                    <i class="social fab fa-github" aria-hidden="true"></i>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>
