@@ -168,7 +168,8 @@ var business_cookie = 'name';
 
 function homeUser(){
     
-  document.getElementById('btn-log').style.display = 'none';
+  if(getCookie(user_cookie)){
+    document.getElementById('btn-log').style.display = 'none';
   document.getElementById('name').innerHTML = `
   <li class="nav-item dropdown" id="user-name">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -242,6 +243,7 @@ function homeUser(){
       }
     }
   }
+  }
 }
 homeUser();
    
@@ -314,7 +316,8 @@ function home(){
 
  function homeBusiness(){
 
-      document.getElementById('btn-log').style.display = 'none';
+      if(getCookie(business_cookie)){
+        document.getElementById('btn-log').style.display = 'none';
       document.getElementById('name').innerHTML = `
       <li class="nav-item dropdown" id="user-name">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -386,6 +389,7 @@ function home(){
             }
           }
         }
+      }
       }
     }
   

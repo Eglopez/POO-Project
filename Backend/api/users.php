@@ -31,10 +31,7 @@
         break;
 
         case 'GET':
-            if(!User::verificateAuthentication($db->getDB())){
-                echo '{"mensaje":""Acceso no Autorizado}';
-            }
-
+        
             if(isset($_GET['id'])){
                 User::getUser($database->getDB(),$_GET['id']);
             }else{

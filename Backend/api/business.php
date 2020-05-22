@@ -5,12 +5,13 @@
     require_once('../class/database-class.php');
 
     $db = new Database();
+    $_POST = json_decode(file_get_contents('php://input'),true);
 
     switch($_SERVER['REQUEST_METHOD']){
 
         case 'POST':
             
-            $company = new Company(
+            $business = new Business(
                 $_POST['name'],
                 $_POST['acronym'],
                 $_POST['email'],
@@ -26,7 +27,7 @@
                 $_POST['card_cvv']
             );
 
-            echo $company->addCompany($db->getDB());
+            echo $business->addCompany($db->getDB());
             echo $_POST['name'];
             
 
@@ -35,9 +36,9 @@
 
         case 'GET':
             if(isset($_GET['id'])){
-                Company::getCompany($db->getDB(),$_GET['id']);
+                Business::getCompany($db->getDB(),$_GET['id']);
             }else{
-                Company::getBusiness($db->getDB());
+                Business::getBusiness($db->getDB());
             }
         break;
 
@@ -46,7 +47,7 @@
             $_PUT = array();
             if(isset($_GET['id'])){
                 parse_str(file_get_contents("php://input"),$_PUT);
-                $company = new Company(
+                $business = new Business(
                     $_POST['name'],
                     $_POST['acronym'],
                     $_POST['email'],
@@ -61,14 +62,14 @@
                     $_POST['card_expiration'],
                     $_POST['card_cvv']
                 );
-                echo $company->updateCopany($db->getDB(),$_GET['id']); 
+                echo $business->updateCompany($db->getDB(),$_GET['id']); 
             }
         break;
 
 
         case 'DELETE':
             if(isset($_GET['id']))
-                Company::deleteCompany($db->getDB(),$_GET['id']);
+                Business::deleteCompany($db->getDB(),$_GET['id']);
         break;
 
     }
