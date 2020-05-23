@@ -53,7 +53,7 @@ function loginUser(){
         
     }).then(res => {
         console.log(res);
-        //window.location.assign('../pages/home.html');
+        window.location.assign('../pages/login.html');
     }).catch(err =>{
         console.error(err);
     });
