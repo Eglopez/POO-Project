@@ -37,7 +37,7 @@ function userValidation(){
       url:'../../Backend/api/login.php',
       method:'post',
       responseType:'json',
-      headers:{'Content-Type':'multipart/form-data'},
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
       data:{
         name:document.getElementById('name').value,
         password:document.getElementById('password-business').value
