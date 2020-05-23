@@ -22,7 +22,7 @@ function userValidation(){
       url:"../../Backend/api/login.php",
       method:"post",
       responseType: "json",
-      headers: {'Content-Type': 'text/plain;charset=utf-8' },
+      headers: {'Content-Type': 'multipart/form-data' },
       data:form_data
     }).then(res=>{
       console.log(res);
@@ -37,7 +37,7 @@ function userValidation(){
       url:'../../Backend/api/login.php',
       method:'post',
       responseType:'json',
-      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      headers:{'Content-Type':'multipart/form-data'},
       data:{
         name:document.getElementById('name').value,
         password:document.getElementById('password-business').value
