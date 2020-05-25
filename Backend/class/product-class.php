@@ -193,6 +193,7 @@
                 ->getSnapshot()
                 ->getValue();
             echo json_encode($products);
+            
         }
 
         public function updateProduct($db,$id,$id_product){
