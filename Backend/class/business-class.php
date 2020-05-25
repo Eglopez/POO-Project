@@ -4,6 +4,7 @@
       
         private $name;
         private $acronym;
+        private $password;
         private $email;
         private $address;
         private $latitude;
@@ -20,6 +21,7 @@
          public function __construct(
             $name,
             $acronym,
+            $password,
             $email,
             $address,
             $latitude,
@@ -34,6 +36,7 @@
         ){
             $this->name = $name;
             $this->acronym = $acronym;
+            $this->password = $password;
             $this->email = $email;
             $this->address = $address;
             $this->latitude = $latitude;
@@ -87,6 +90,28 @@
 
                 return $this;
         }
+
+
+         /**
+         * Get the value of password
+         */ 
+        public function getPassword()
+        {
+                return $this->password;
+        }
+
+        /**
+         * Set the value of password
+         *
+         * @return  self
+         */ 
+        public function setPassword($password)
+        {
+                $this->password = $password;
+
+                return $this;
+        }
+
 
         /**
          * Get the value of email
@@ -338,7 +363,7 @@
         }
     
         public static function deleteCompany($db,$id){
-            $db->getReference('users')
+            $db->getReference('business')
                 ->getChild($id)
                 ->remove();
                 
@@ -372,12 +397,12 @@
                 
                 if($response['authenticated']){
                     $response['key'] = $key;
-                    $response['user_name'] = $data[$key]['name'];
+                    $response['name'] = $data[$key]['name'];
                     $response['token'] = bin2hex(openssl_random_pseudo_bytes(16));
                     $_SESSION['token'] = $response['token'];
         
                     setcookie('key', $response['key'],time()+(60*60*24*31),'/');
-                    setcookie('user_name', $response['user_name'],time()+(60*60*24*31),'/');
+                    setcookie('name', $response['name'],time()+(60*60*24*31),'/');
                     setcookie('token', $response['token'],time()+(60*60*24*31),'/');
                    
         
@@ -386,7 +411,7 @@
                     
                 }else{
                     setcookie('key', $response['key'],time()-10,'/');
-                    setcookie('user_name', $response['user_name'],time()-10,'/');
+                    setcookie('name', $response['name'],time()-10,'/');
                     setcookie('token', $response['token'],time()-10,'/');
                 }
                
@@ -411,6 +436,7 @@
         public function getData(){
             $data['name'] = $this->name;
             $data['acronym'] = $this->acronym;
+            $data['password'] = password_hash($this->password,PASSWORD_DEFAULT);
             $data['email'] = $this->email;
             $data['address'] = $this->address;
             $data['latitude'] = $this->latitude;

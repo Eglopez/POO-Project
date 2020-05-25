@@ -71,6 +71,7 @@ function login(){
         data:{
             name:document.getElementById('name').value,
             acronym:document.getElementById('acronym').value,
+            password:document.getElementById('password-business').value,
             email:document.getElementById('email-business').value,
             address:document.getElementById('address').value,
             latitude:document.getElementById('latitude').value,
@@ -85,6 +86,7 @@ function login(){
         }
     }).then(res => {
         console.log(res);
+        window.location.assign('../pages/login.html');
     }).catch(err => {
         console.error(err);
     });

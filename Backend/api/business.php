@@ -14,6 +14,7 @@
             $business = new Business(
                 $_POST['name'],
                 $_POST['acronym'],
+                $_POST['password'],
                 $_POST['email'],
                 $_POST['address'],
                 $_POST['latitude'],
@@ -50,6 +51,7 @@
                 $business = new Business(
                     $_POST['name'],
                     $_POST['acronym'],
+                    $_POST['password'],
                     $_POST['email'],
                     $_POST['address'],
                     $_POST['latitude'],

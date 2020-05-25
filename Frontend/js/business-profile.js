@@ -47,8 +47,7 @@ function businessProfile(business){
       </li>
     `;
 
-    document.getElementById('img-business').innerHTML =
-    `<img src="">`;
+      
     document.getElementById('name-title').innerHTML =
     `<h5>${business.name}</h5>`;
     document.getElementById('nameb').innerHTML =

@@ -34,7 +34,7 @@ function userValidation(){
 
   function businessValidation(){
     axios({
-      url:'../../Backend/api/login.php',
+      url:'../../Backend/api/login-business.php',
       method:'post',
       responseType:'json',
       headers:{'Content-Type':'multipart/form-data'},

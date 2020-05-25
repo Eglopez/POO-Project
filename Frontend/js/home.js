@@ -130,12 +130,12 @@ var business_cookie = 'name';
 
   function businessValidation(){
     axios({
-      url:'../../Backend/api/login.php',
+      url:'../../Backend/api/login-business.php',
       method:'post',
       responseType:'json',
       headers:{'Content-Type':'multipart/form-data'},
       data:{
-        name:document.getElementById('businees-name').value,
+        name:document.getElementById('business-name').value,
         password:document.getElementById('business-password').value
       }
     }).then(res => {
