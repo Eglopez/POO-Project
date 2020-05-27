@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodprom</title>
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../frameworks/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../frameworks/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a7087f00a2.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: whitesmoke;">
+
+    <div id="navhome">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="home.html"><img src="../img/logonav.svg" alt=""></a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="user">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Ofertas</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categorias
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Deportes</a>
+                      <a class="dropdown-item" href="#">Ropa</a>
+                      <a class="dropdown-item" href="#">Limpieza</a>
+                      <a class="dropdown-item" href="#">Accesorios</a>
+                    </div>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="business-name">
+                    
+                    </li>
+                </ul>
+              </form>
+              
+            </div>
+          </nav>
+    </div><br>
+    <br>
+
+    <h2 class="text-center text-danger">Añadir nuevo producto</h2>
+    <hr><br>
+
+
+    <div class="container  myform" id="productform">
+        <form enctype="multipart/form-data">
+                <div class="col form-group">
+                    <label for="product-name">Nombre del Producto:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombre del producto" id="product-name">
+                </div>
+                <div class="col form-group">
+                    <label for="product-description">Descripcion del producto:</label>
+                    <input type="text" class="form-control" placeholder="Describa el producto" id="product-description">
+                </div>
+                <div class="col form-group">
+                    <label for="product-price">Precio:</label>
+                    <input type="text" class="form-control" placeholder="Precio de la promocion" id="product-price">
+                </div>
+                <div class="col form-group">
+                    <label for="product-previousprice">Precio anterior:</label>
+                    <input type="text" class="form-control" placeholder="Precio anterior del producto" id="product-previousprice">
+                </div><br>
+                <div class="col form-group">
+                    <label for="product-amount">Cantidad disponible:</label>
+                    <input type="text" class="form-control" placeholder="cantidad disponible del producto" id="product-amount">
+                </div>
+                <br>
+                <div class="col form-group">
+                    Categoria:<select id="product-category" class="form-control">
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Hogar">Hogar</option>
+                        <option value="Deportes">Deportes</option>
+                        <option value="Ropa">Ropa</option>
+                    </select>
+                </div><br>
+            
+        </form>
+        <form method="POST" id="form-img"  enctype="multipart/form-data">
+            <label for="quantInput">Seleccionar Imagen:</label>
+            <input type="file" name="product-img" accept=".png,.jpg,.jpeg">    
+        </form>
+        <div class="mr-auto ml-auto">
+            <button type="button" class="btn btn-lg btn-danger"  onclick="addProduct();">Añadir Producto</button><br><br>
+        </div><br><br><br>
+    </div>
+    
+  
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/addproducts.js"></script>
+</body>
+</html>

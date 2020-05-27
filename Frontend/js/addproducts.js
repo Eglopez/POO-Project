@@ -2,27 +2,6 @@ var business_cookie = 'name';
 var id_cookie = 'key';
 
 
-axios({
-    url:'../../Backend/api/business.php'+`?id=${getCookie(id_cookie)}`,
-    method:'get',
-    responseType:'json'
-  }).then(res => {
-    console.log(res.data);
-    businessIcon(res.data);
-  
-  }).catch(err => {
-    console.error(err);
-  });
-
-  axios({
-      url:'../../Backend/api/products.php'+`?id=${getCookie(id_cookie)}`,
-      method:'get',
-      responseType:'json'
-  }).then(res => {
-      console.log(res.data);
-      productCards(res.data);
-  })
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -38,6 +17,18 @@ function getCookie(cname) {
     }
     return "";
   }
+
+  axios({
+    url:'../../Backend/api/business.php'+`?id=${getCookie(id_cookie)}`,
+    method:'get',
+    responseType:'json'
+  }).then(res => {
+    console.log(res.data);
+    businessIcon(res.data);
+  
+  }).catch(err => {
+    console.error(err);
+  });
 
   function businessIcon(business){
       
@@ -58,33 +49,45 @@ function getCookie(cname) {
         </li>
       `;
     }
-}   
+}  
 
-function productCards(products){
+function addProduct(){
+    var img = document.getElementById('form-img');
+    let product_name = document.getElementById('product-name').value;
+    let formData = new FormData(img);
+    formData.append('name-product',product_name);
+    axios({
+        url:'../../Backend/api/upload.php',
+        method:'post',
+        responseType:'json',
+        data:formData
+    }).then(res => {
+        console.log(res.data);
+        console.log(res);
+        
+        let product = {
+            name:document.getElementById('product-name').value,
+            description:document.getElementById('product-description').value,
+            price:document.getElementById('product-price').value,
+            previous_price:document.getElementById('product-previousprice').value,
+            img:res.data,
+            amount:document.getElementById('product-amount').value,
+            category:document.getElementById('product-category').value
+        }; 
 
-    console.log(Object.keys(products));
-    var product = Object.values(products);
-
-    for(let i=0;i<product.length;i++){
-        document.getElementById('products').innerHTML +=
-        `
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card shadow bg-white rounded">
-              <img src="${product[i].img}" class="card-img-top">
-              <div class="card-body">
-                  <ul>
-                      <li>${product[i].description}</li>
-                      <li id="business">
-                         ${getCookie(business_cookie)}
-                      </li>
-                      <li><i class="fas fa-tags"></i>${product[i].amount}</li>
-                      <li>${product[i].previous_price}</li>
-                      <li id="price">${product[i].price}</li>
-                  </ul>
-              </div>
-          </div>
-        </div>
-        `;
-    }
+       axios({
+            url:'../../Backend/api/products.php/'+`?id=${getCookie(id_cookie)}`,
+            method:'post',
+            responseType:'json',
+            headers:{'Content-Type':'multipart/form-data'},
+            data:product
+        }).then(res => {
+            console.log(res);
+        }).catch(err => {
+            console.error(err);
+        });
+    }).catch(err => {
+        console.error(err);
+        
+    })
 }
-
