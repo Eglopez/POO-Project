@@ -113,7 +113,7 @@ var business_cookie = 'name';
     console.log(document.getElementById('password').value);
 
     axios({
-      url:"../../Backend/api/login.php",
+      url:"https://eglopez.github.io/POO-Project/Backend/api/login.php",
       method:"post",
       responseType: "json",
       headers: {'Content-Type': 'multipart/form-data' },
