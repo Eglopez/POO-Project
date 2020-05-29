@@ -732,12 +732,12 @@ h1,h2,h3{
 }    
 
 #productform{
-    margin-left: 300px;
+    margin-left: 400px;
     background-color: #0C5D7B!important;
     color: white;
 } 
 
 #productform:hover{
-    background-color: rgba(12, 93, 123, 0.774)!important;
+    background-color: #0c5d7bc5!important;
 }
  

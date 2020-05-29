@@ -2,6 +2,8 @@
 
     
     header("Content-Type: application/json");
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST');
     include_once('../class/user-class.php');
     require_once('../class/database-class.php');
 

@@ -147,6 +147,10 @@ var business_cookie = 'name';
     });
   }
 
+  function goSignup(){
+    window.location.assign('../pages/signup.html');
+  }
+
   function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);

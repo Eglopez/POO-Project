@@ -48,7 +48,7 @@
               </form>
               <div id="btn-log">
                 <button class="btn btn-danger" id="btn-login" data-toggle="modal" data-target="#loginModal">Login</button>
-                <button class="btn btn-danger" id="btn-signup">Signup</button>
+                <button class="btn btn-danger" id="btn-signup" onclick="goSignup()">Signup</button>
               </div>
           </nav>
     </div><br>
@@ -136,7 +136,7 @@
 
             </div>
             <div class="modal-footer" id="btnlogin-user">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Close</button>
               <button id="login" type="button" class="btn btn-danger" onclick="userValidation()">Login</button>
             </div>
             <div class="modal-footer" id="btnlogin-business" style="display: none;">
