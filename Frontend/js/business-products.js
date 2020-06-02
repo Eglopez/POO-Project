@@ -19,7 +19,7 @@ axios({
       method:'get',
       responseType:'json'
   }).then(res => {
-      console.log(res.data);
+      console.log(res.data.key);
       productCards(res.data);
   })
 

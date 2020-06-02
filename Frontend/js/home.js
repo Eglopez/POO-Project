@@ -1,6 +1,6 @@
 var user_cookie = 'user_name';
 var business_cookie = 'name';
-  
+var user_key = 'key';  
   
   var categories = [
     {
@@ -113,7 +113,7 @@ var business_cookie = 'name';
     console.log(document.getElementById('password').value);
 
     axios({
-      url:"https://eglopez.github.io/POO-Project/Backend/api/login.php",
+      url:"../../Backend/api/login.php",
       method:"post",
       responseType: "json",
       headers: {'Content-Type': 'multipart/form-data', 'Access-Control-Allow-Origin': '*' },
@@ -197,7 +197,7 @@ function homeUser(){
           document.getElementById('home').innerHTML +=
           `
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-            <div class="card shadow bg-white rounded">
+            <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
                 <img src="${product.img}" class="card-img-top">
                 <div class="card-body">
                     <ul>
@@ -226,7 +226,7 @@ function homeUser(){
           document.getElementById('sports').innerHTML +=
           `
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-            <div class="card shadow bg-white rounded">
+            <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
                 <img src="${product.img}" class="card-img-top">
                 <div class="card-body">
                     <ul>
@@ -414,3 +414,77 @@ function home(){
   document.getElementById('btnlogin-user').style.display = 'block';
   document.getElementById('btnlogin-business').style.display ='none';
 }
+
+function purchase(img,business,price,name,description){
+  $('#modalPurchases').modal('show');
+  document.getElementById('purchases').innerHTML =`
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="${img}" width="300" height="200"><br> 
+          <h3 class="text-center">${business}</h3><br>
+        </div>
+        <div class="col-lg-6">
+          <div class="col-lg-4">
+            Cantidad A Solicitar : 
+          </div><br>
+          <div class="col-lg-8 form-group">
+              <input type="text" class="form-control" id="amount">    
+          </div><br>
+          <div class="col-lg-4">
+              Forma de pago : 
+          </div><br>
+          <select class="custom-select" id="payment">
+              <option value="Credito">Credito</option> 
+              <option value="Debito">Debito</option>   
+          </selecct>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mr-auto">
+
+            </div>
+            <div class="col-lg-2"><br>
+            <b>$ ${ price }</b>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+`;
+
+document.getElementById('footer-modal').innerHTML =`
+        <button type="button" onclick="addPurchase('${img}','${business}','${price}','${name}','${description}')" 
+        class="btn btn-danger">
+        Comprar</button>`
+        ;
+ 
+}
+
+function addPurchase(img,business,price,name,description){
+  axios({
+    url:'../../backend/api/purchases.php?id='+`${getCookie(user_key)}`,
+    method:'post',
+    responseType:'json',
+    headers:{'Content-Type':'multipart/form-data'},
+    data:{
+      productName:name,
+      productPrice:price,
+      amount:document.getElementById('amount').value,
+      payment:document.getElementById('payment').value,
+      productImg:img,
+      product_description:description,
+      productBusiness:business
+    }
+  }).then(res => {
+    $('#modalPurchases').modal('hide');
+  }).catch(err => {
+    console.log(err);
+  });
+}
+
+
+
+   
