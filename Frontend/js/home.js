@@ -182,7 +182,7 @@ function homeUser(){
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="user">
       <a class="dropdown-item" href="user-profile.html"><i class="fas fa-user text-danger"></i>Perfil</a>
       <a class="dropdown-item" href="#"><i class="fas fa-heart text-danger"></i>Favoritos</a>
-      <a class="dropdown-item" href="sales.html"><i class="fas fa-cart-arrow-down text-danger text-danger"></i>Compras</a>
+      <a class="dropdown-item" href="user-purchases.html"><i class="fas fa-cart-arrow-down text-danger text-danger"></i>Compras</a>
       <a class="dropdown-item" href="../../Backend/class/logout.php"><i class="fas fa-sign-out-alt text-danger"></i>Cerrar sesion</a>
     </div>
   </li>
