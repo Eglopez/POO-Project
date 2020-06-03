@@ -9,7 +9,7 @@ class User{
     private $password;
     private $confirm_password;
     private $phone_number;
-    private $gender;
+    private $profession;
 
 
     public function __construct(
@@ -21,7 +21,7 @@ class User{
         $password,
         $confirm_password,
         $phone_number,
-        $gender
+        $profession
     ){
         
         $this->name = $name;
@@ -31,7 +31,7 @@ class User{
         $this->password = $password;
         $this->confirm_password = $confirm_password;
         $this->phone_number = $phone_number;
-        $this->gender = $gender;
+        $this->profession = $profession;
     }
 
     
@@ -296,6 +296,11 @@ class User{
         }    
     }
 
+    public static function saveImg($db,$path,$id){
+        $profile = $db->getReference('users/'.$id.'/img')
+            ->set($path);
+    }
+
     public function getData(){
         $data['name'] = $this->name;
         $data['last_name'] = $this->last_name;
@@ -304,7 +309,7 @@ class User{
         $data['password'] = password_hash($this->password,PASSWORD_DEFAULT);
         $data['confirm_password'] = password_hash($this->confirm_password,PASSWORD_DEFAULT);
         $data['phone_number'] = $this->phone_number;
-        $data['gender']  = $this->gender;
+        $data['profession']  = $this->profession;
         return $data;
     }
 }

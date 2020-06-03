@@ -28,7 +28,7 @@
                   <a class="nav-link" href="#">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Ofertas</a>
+                  <a class="nav-link" href="user-business.html">Empresas</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,7 +57,11 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-img" id="profile-img">
-                        
+                      <img src="../img/user-profile.jpg">
+                      <div class="file btn btn-lg btn-danger" data-toggle="modal" data-target="#ImgModal">   
+                        Change Photo               
+                          
+                      </div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -121,8 +125,8 @@
                                 <div class="col-md-6">
                                     <label>Profession</label>
                                 </div>
-                                <div class="col-md-6">
-                                    <p>Web Developer and Designer</p>
+                                <div class="col-md-6" id="profession">
+                                    
                                 </div>
                             </div>
                         </div>
@@ -143,10 +147,18 @@
               </button>
             </div>
             <div class="modal-body">
+              <label for="edit-name">Name:</label> 
+              <input id="edit-name" type="text" class="form-control" placeholder="Ingrese el nuevo Nombre"><br>
+              <label for="edit-lastname">Lastname:</label> 
+              <input id="edit-lastname" type="text" class="form-control" placeholder="Ingrese el nuevo Apellido"><br>
               <label for="edit-username">Username:</label> 
               <input id="edit-username" type="text" class="form-control" placeholder="Ingrese el nuevo Username"><br>
               <label for="edit-email">Email:</label>
               <input id="edit-email" type="text" class="form-control" placeholder="Nuevo Email"><br>
+              <label for="edit-password">Password:</label> 
+              <input id="edit-password" type="text" class="form-control" placeholder="Ingrese la nueva contaseña"><br>
+              <label for="edit-confirmPassword">Confirm Password:</label> 
+              <input id="edit-confirmPassword" type="text" class="form-control" placeholder="Confirme contraseña"><br>
               <label for="edit-phone">Phone:</label>
               <input id="edit-phone" type="text" class="form-control" placeholder="Nuevo Numero Telefonico"><br>
               <label for="edit-profession">Profession:</label>
@@ -154,11 +166,31 @@
 
             </div>
             <div class="modal-footer">
-                <div class="mr-auto">
-                    <button type="button" class="btn btn-danger">Añadir Work Link</button>
-                    <button type="button" class="btn btn-danger">Añadir Habilidades</button>
-                </div>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              <button type="button" class="btn btn-danger" onclick="editUser()">Actualizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="ImgModal" tabindex="-1" role="dialog" aria-labelledby="ImgModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Photo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" id="user-img"  enctype="multipart/form-data">
+                 <label for="user-ig">Seleccione la nueva foto</label>           
+                <input type="file" name="user-img" accept=".png,.jpg,.jpeg">    
+            </form>
+            </div>
+            <div class="modal-footer">
+              
+              <button type="button" class="btn btn-danger" onclick="profileImg()">Cambiar</button>
             </div>
           </div>
         </div>

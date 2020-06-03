@@ -27,7 +27,7 @@
                 $_POST['password'],
                 $_POST['confirm_password'],
                 $_POST['phone_number'],
-                $_POST['gender']  
+                $_POST['profession']  
             );
             echo $_POST['email_address'];
             echo $user->addUser($database->getDB());
@@ -45,13 +45,11 @@
         break;
 
         case 'PUT':
-            if(!User::verificateAuthentication($db->getDB())){
-                echo '{"mensaje":""Acceso no Autorizado}';
-            }
+            
 
-            $_PUT = array();
+            $_PUT = json_decode(file_get_contents('php://input'),true);
             if(isset($_GET['id'])){
-                parse_str(file_get_contents("php://input"),$_PUT);
+                
                 $user = new User(
                     $_PUT['name'],
                     $_PUT['last_name'],
@@ -60,7 +58,7 @@
                     $_PUT['password'],
                     $_PUT['confirm_password'],
                     $_PUT['phone_number'],
-                    $_PUT['gender']    
+                    $_PUT['profession']    
                 );
                 echo $user->updateUser($database->getDB(),$_GET['id']); 
             }
