@@ -28,7 +28,7 @@
                   <a class="nav-link" href="#">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Ofertas</a>
+                  <a class="nav-link" href="user-business.html">Empresas</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,10 +60,10 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-img" id="img-business">
-                        
-                        <div class="file btn btn-lg btn-danger">
+                        <img src="../img/user-profile.jpg">
+                        <div class="file btn btn-lg btn-danger" data-toggle="modal" data-target="#ImgModal">
                             Change Photo
-                            <input type="file" name="file">
+                            
                         </div>
                     </div>
                 </div>
@@ -162,6 +162,30 @@
             </div>
         </form>           
     </div>
+
+
+    <div class="modal fade" id="ImgModal" tabindex="-1" role="dialog" aria-labelledby="ImgModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Photo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" id="business-img"  enctype="multipart/form-data">
+                 <label for="business-img">Seleccione la nueva foto</label>           
+                <input type="file" name="business-img" accept=".png,.jpg,.jpeg">    
+            </form>
+            </div>
+            <div class="modal-footer">
+              
+              <button type="button" class="btn btn-danger" onclick="profileImg()">Cambiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

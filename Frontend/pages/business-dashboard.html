@@ -28,7 +28,7 @@
     }
   </style>
 <body>
-    
+
     <div id="navhome">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@
                   <a class="nav-link" href="#">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Ofertas</a>
+                  <a class="nav-link" href="user-business.html">Empresas</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,69 +61,47 @@
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-building"></i>Jetstereo
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="user">
-                            <a class="dropdown-item" href="business-profile.html"><i class="fas fa-users text-danger"></i>Perfil</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-shopping-bag text-danger"></i>Mis articulos</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-shopping-cart text-danger"></i>Agregar Articulo</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-chart-line text-danger"></i>Dashboard</a>
-                            <a class="dropdown-item" href="../index.html"><i class="fas fa-sign-out-alt text-danger"></i>Cerrar sesion</a>
-                          </div>
-                    </li>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="dashboard-business">
+                    
                 </ul>
               </form>
-              
+
             </div>
           </nav>
     </div>
-      
+
       <div class="container-fluid">
         <div class="row">
           <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">
+                  <a class="nav-link active" href="business-dashboard.html">
                     <span class="text-danger" data-feather="home"></span>
                     Dashboard <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="business-products.html">
                     <span class="text-danger" data-feather="file"></span>
-                    Orders
+                    My Products
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="products.html">
                     <span class="text-danger" data-feather="shopping-cart"></span>
                     Products
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="business-profile.html">
                     <span class="text-danger" data-feather="users"></span>
-                    Customers
+                    Perfil
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span class="text-danger" data-feather="bar-chart-2"></span>
-                    Reports
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span class="text-danger" data-feather="layers"></span>
-                    Integrations
-                  </a>
-                </li>
+                
               </ul>
-      
+
               <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                 <span>Saved reports</span>
                 <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
@@ -158,10 +136,10 @@
               </ul>
             </div>
           </nav>
-      
+
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-              <h1 class="h2">Dashboard</h1>
+              <h1 class="h2 text-danger">Dashboard</h1>
               <div class="btn-toolbar mb-2 mb-md-0">
                 <div class="btn-group mr-2">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -173,11 +151,11 @@
                 </button>
               </div>
             </div>
-      
+
             <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-      
-            
-            
+
+
+
           </main>
         </div>
       </div>
@@ -189,7 +167,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../js/controlador.js"></script>  
+    <script src="../js/dashboard.js"></script>  
 </body>
-</html>
+</html> 

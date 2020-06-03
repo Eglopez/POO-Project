@@ -58,7 +58,45 @@ function businessProfile(business){
     `<p>${business.country}</p>`;
     document.getElementById('adressb').innerHTML =
     `<p>${business.address}</p>`;
+
+    if(business.img){
+      document.getElementById('img-business').innerHTML=
+      `<img src="${business.img}">
+      <div class="file btn btn-lg btn-danger" data-toggle="modal" data-target="#ImgModal">   
+        Change Photo                   
+      </div>`;
+
+    }
 }
 } 
-      
+
+function profileImg(){
+  var profile = document.getElementById('business-img');
+  let business = getCookie(business_cookie);
+  let formData = new FormData(profile);
+  formData.append('Empresa',business);
+
+  axios({
+    url:'../../backend/api/saveProfileBusiness.php?id='+`${getCookie(id_cookie)}`,
+    method:'post',
+    responseType:'json',
+    data:formData
+  }).then(res => {
+    console.log('se ha cambiado la foto de perfil');
+    axios({
+      url:'../../Backend/api/business.php?id='+`${getCookie(id_cookie)}`,
+      method:'get',
+      responseType:'json'
+    }).then(res => {
+      console.log(res.data);
+      document.getElementById('img-business').innerHTML=
+      `<img src="${res.data.img}">
+      <div class="file btn btn-lg btn-danger" data-toggle="modal" data-target="#ImgModal">   
+        Change Photo                   
+      </div>`;
+    });
+    $('#ImgModal').modal('hide');
+    
+  });
+}
     

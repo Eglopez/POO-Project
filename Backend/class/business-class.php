@@ -433,6 +433,11 @@
                 }    
             }
 
+            public static function saveImg($db,$path,$id){
+                $profile = $db->getReference('business/'.$id.'/img')
+                    ->set($path);
+            }    
+
         public function getData(){
             $data['name'] = $this->name;
             $data['acronym'] = $this->acronym;
