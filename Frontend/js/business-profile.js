@@ -100,3 +100,25 @@ function profileImg(){
   });
 }
     
+function updateProfile(){
+  let business = {
+    name:document.getElementById('edit-bname').value,
+    email:document.getElementById('edit-bemail').value,
+    phone:document.getElementById('edit-phone').value,
+    latitude:document.getElementById('edit-latitude').value,
+    longitud:document.getElementById('edit-longitud').value
+  };
+  axios({
+    url:'../../Backend/api/business.php?id='+`${getCookie(id_cookie)}`,
+    method:'put',
+    responseType:'json',
+    headers:{'Content-Type':'multipart/form-data'},
+    data: business
+  }).then(res => {
+    console.log(res);
+  }).catch(err => {
+    console.log(err);
+    $('#editBusinessModal').modal('hide');
+  });
+  $('#editBusinessModal').modal('hide');
+}

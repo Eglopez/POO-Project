@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Editar Perfil"/>
+                    <button type="button" class="profile-edit-btn" data-toggle="modal" data-target="#editBusinessModal">Editar Perfil</button>
                 </div>
             </div>
             <div class="row">
@@ -182,6 +182,45 @@
             <div class="modal-footer">
               
               <button type="button" class="btn btn-danger" onclick="profileImg()">Cambiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editBusinessModal" tabindex="-1" role="dialog" aria-labelledby="editBusinessModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #12103D;color: white;">
+              <h5 class="modal-title" id="exampleModalLabel">Actualizar Perfil</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="background-color: whitesmoke;">
+              <div class="form-group">
+                  <label for="edit-bname">Name:</label>
+                  <input type="text" id="edit-bname" class="form-control" placeholder="Ingrese el nuevo Nombre">
+              </div>
+              <div class="form-group">
+                  <label for="edit-bemail">Email:</label>
+                  <input type="text" id="edit-bemail" class="form-control" placeholder="Ingrese el nuevo email">
+              </div>
+              <div class="form-group">
+                  <label for="edit-bphone">Phone Number:</label>
+                  <input type="text" class="form-control" id="edit-phone" placeholder="Numero telefonico">
+              </div>
+              <div class="form-group">
+                  <label for="edit-latitude">Latitude:</label>
+                  <input type="text" id="edit-latitude" class="form-control" placeholder="latitude">
+              </div>
+              <div class="form-group">
+                  <label for="edit-longitug">Longitud:</label>
+                  <input type="text" id="edit-longitud" class="form-control" placeholder="longitud">
+              </div>
+            </div>
+            <div class="modal-footer">
+              
+              <button type="button" class="btn btn-danger" onclick="updateProfile()">Actualizar</button>
             </div>
           </div>
         </div>
