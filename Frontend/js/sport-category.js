@@ -1,104 +1,104 @@
 var user_cookie = 'user_name';
 var business_cookie = 'name';
 var categories = [
-    {
-        category:"Hogar",
-        business:[
-            {
-                name:"Jetstereo",
-                products:[
-                    {
-                        name: "Muebles",
-                        prom: "Los mejores muebles para tu hogar",
-                        previous_price:"L.30,000",
-                        price:"L.26,455",
-                        img: "../img/mueble.jpg",
-                        amount: 25
-                    },
-                    {
-                      name: "Muebles",
-                      prom: "Los mejores muebles para tu hogar",
-                      previous_price:"L.30,000",
-                      price:"L.26,455",
-                      img: "../img/mueble.jpg",
-                      amount: 30
-                    }
-                    
-                ]
-            },
-            {
-                name: "Empresa 2",
-                products:[
-                    {
-                        name: "Muebles",
-                        prom: "Los mejores muebles para tu hogar",
-                        previous_price:"L.30,000",
-                        price:"L.26,455",
-                        img: "../img/mueble.jpg",
-                        amount: 50
-                    },
-                    {
-                      name: "Muebles",
-                      prom: "Los mejores muebles para tu hogar",
-                      previous_price:"L.30,000",
-                      price:"L.26,455",
-                      img: "../img/mueble.jpg",
-                      amount: 43
-                  }
-                ]
-            },
-  
-        ]
-    },
-    {
-      category: "Deportes",
+  {
+      category:"Hogar",
       business:[
-        {
-          name: "Diunsa",
-          products:[
-            {
-              name:"Balon de futbol",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"30 disponibles"
-            },
-            {
-              name:"Balon",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"15 dsponibles"
-            }
-          ] 
-  
-        },
-        {
-          name: "Sports",
-          products:[
-            {
-              name:"Balon de futbol",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"56 disponibles"
-            },
-            {
-              name:"Balon",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"22 disponibles"
-            }
-          ]  
-        }
+          {
+              name:"Diunsa",
+              products:[
+                  {
+                      name: "Muebles",
+                      prom: "Los mejores muebles para tu hogar",
+                      previous_price:"L.30,000",
+                      price:"L.26,455",
+                      img: "../img/mueble.jpg",
+                      amount: 25
+                  },
+                  {
+                    name: "Sofa",
+                    prom: "Los mejores muebles para tu hogar",
+                    previous_price:"L.30,000",
+                    price:"L.26,455",
+                    img: "../img/sofa.jpg",
+                    amount: 30
+                  }
+                  
+              ]
+          },
+          {
+              name: "Empresa X",
+              products:[
+                  {
+                      name: "Mesa",
+                      prom: "Los mejores muebles para tu hogar",
+                      previous_price:"L.30,000",
+                      price:"L.28,450",
+                      img: "../img/table.jpg",
+                      amount: 50
+                  },
+                  {
+                    name: "Estante",
+                    prom: "Los mejores muebles para tu hogar",
+                    previous_price:"L.38,000",
+                    price:"L.33,000",
+                    img: "../img/estante.jpg",
+                    amount: 43
+                }
+              ]
+          },
+
       ]
-    }
-  ];
+  },
+  {
+    category: "Deportes",
+    business:[
+      {
+        name: "Diunsa",
+        products:[
+          {
+            name:"Balon de futbol",
+            prom:"Balon de futbol de la mejor calidad",
+            previous_price:"L.300",
+            price:"L.95",
+            img: "../img/Pelota.jpg",
+            amount:"30 disponibles"
+          },
+          {
+            name:"Raqueta de Tenis",
+            prom:"Lo mejor para el tenies",
+            previous_price:"L.3000",
+            price:"L.2,335",
+            img: "../img/tenis.jpeg",
+            amount:"15 dsponibles"
+          }
+        ] 
+
+      },
+      {
+        name: "Sports",
+        products:[
+          {
+            name:"Tacos de Futbol",
+            prom:"Futbol",
+            previous_price:"L.4,000",
+            price:"L.2,225",
+            img: "../img/tenis.jpg",
+            amount:"56 disponibles"
+          },
+          {
+            name:"Camisa",
+            prom:"Atletico de Madrid",
+            previous_price:"L.300",
+            price:"L.95",
+            img: "../img/camisa.jpg",
+            amount:"22 disponibles"
+          }
+        ]  
+      }
+    ]
+  }
+];
 
   function getCookie(cname) {
     var name = cname + "=";
@@ -195,7 +195,7 @@ function category(){
                       <img src="${product.img}" class="card-img-top">
                       <div class="card-body">
                           <ul>
-                              <li>${product.prom}</li>
+                              <li>${product.name}</li>
                               <li id="business">
                                  ${busi.name}
                               </li>

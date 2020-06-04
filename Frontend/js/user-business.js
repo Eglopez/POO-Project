@@ -58,7 +58,7 @@ function businessCards(data){
         `
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
           <div class="card shadow bg-white rounded">
-              <img src="${business[i].img}" class="card-img-top">
+              <img src="${business[i].img}" class="card-img-top" height="300">
               <div class="card-body">
                   <ul>
                       <li>${business[i].name}</li>

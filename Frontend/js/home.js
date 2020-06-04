@@ -2,105 +2,203 @@ var user_cookie = 'user_name';
 var business_cookie = 'name';
 var user_key = 'key';  
   
-  var categories = [
-    {
-        category:"Hogar",
-        business:[
-            {
-                name:"Jetstereo",
-                products:[
-                    {
-                        name: "Muebles",
-                        prom: "Los mejores muebles para tu hogar",
-                        previous_price:"L.30,000",
-                        price:"L.26,455",
-                        img: "../img/mueble.jpg",
-                        amount: 25
-                    },
-                    {
-                      name: "Muebles",
-                      prom: "Los mejores muebles para tu hogar",
-                      previous_price:"L.30,000",
-                      price:"L.26,455",
-                      img: "../img/mueble.jpg",
-                      amount: 30
-                    }
-                    
-                ]
-            },
-            {
-                name: "Empresa 2",
-                products:[
-                    {
-                        name: "Muebles",
-                        prom: "Los mejores muebles para tu hogar",
-                        previous_price:"L.30,000",
-                        price:"L.26,455",
-                        img: "../img/mueble.jpg",
-                        amount: 50
-                    },
-                    {
-                      name: "Muebles",
-                      prom: "Los mejores muebles para tu hogar",
-                      previous_price:"L.30,000",
-                      price:"L.26,455",
-                      img: "../img/mueble.jpg",
-                      amount: 43
-                  }
-                ]
-            },
-  
-        ]
-    },
-    {
-      category: "Deportes",
-      business:[
+var categories = [
+  {
+    category:"Ropa",
+    business:[
         {
-          name: "Diunsa",
-          products:[
-            {
-              name:"Balon de futbol",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"30 disponibles"
-            },
-            {
-              name:"Balon",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"15 dsponibles"
-            }
-          ] 
-  
+            name:"Mendels",
+            products:[
+                {
+                    name: "Sueter",
+                    prom: "Los Sueters mas calientes",
+                    previous_price:"L.3,000",
+                    price:"L.2,455",
+                    img: "../img/sueter.jpg",
+                    amount: 12
+                },
+                {
+                  name: "Falda",
+                  prom: "Para que luzcas hermosa",
+                  previous_price:"L.500",
+                  price:"L.450",
+                  img: "../img/falda.jpg",
+                  amount: 30
+                }
+                
+            ]
         },
         {
-          name: "Sports",
-          products:[
-            {
-              name:"Balon de futbol",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"56 disponibles"
-            },
-            {
-              name:"Balon",
-              prom:"Balon de futbol de la mejor calidad",
-              previous_price:"L.300",
-              price:"L.95",
-              img: "../img/Pelota.jpg",
-              amount:"22 disponibles"
-            }
-          ]  
+            name: "Levis",
+            products:[
+                {
+                    name: "Jeans",
+                    prom: "Jean comodos",
+                    previous_price:"L.4,000",
+                    price:"L.3,455",
+                    img: "../img/jeans.jpg",
+                    amount: 50
+                },
+                {
+                  name: "Chaqueta",
+                  prom: "Baroniles",
+                  previous_price:"L.6,000",
+                  price:"L.5,455",
+                  img: "../img/chaquta.jpg",
+                  amount: 43
+              }
+            ]
+        },
+
+    ]
+},
+{
+  category: "Tecnologia",
+  business:[
+    {
+      name: "Google",
+      products:[
+        {
+          name:"Playstation",
+          prom:"Las consolas mas potentes",
+          previous_price:"L.15,000",
+          price:"L.13,000",
+          img: "../img/playstation.jpg",
+          amount:"30 disponibles"
+        },
+        {
+          name:"Tv",
+          prom:"Tv HD",
+          previous_price:"L.35,000",
+          price:"L.30,567",
+          img: "../img/tv.jpg",
+          amount:"15 dsponibles"
         }
-      ]
+      ] 
+
+    },
+    {
+      name: "Samsung",
+      products:[
+        {
+          name:"Smatphone",
+          prom:"Siempre a tu lado",
+          previous_price:"L.28,000",
+          price:"L.22,000",
+          img: "../img/smartphones.jpg",
+          amount:"56 disponibles"
+        },
+        {
+          name:"Smartwatch",
+          prom:"Reloj inteligente",
+          previous_price:"L.3,500",
+          price:"L.3,000",
+          img: "../img/smatwatch.jpg",
+          amount:"22 disponibles"
+        }
+      ]  
     }
-  ];
+  ]
+},
+  
+  {
+      category:"Hogar",
+      business:[
+          {
+              name:"Diunsa",
+              products:[
+                  {
+                      name: "Muebles",
+                      prom: "Los mejores muebles para tu hogar",
+                      previous_price:"L.30,000",
+                      price:"L.26,455",
+                      img: "../img/mueble.jpg",
+                      amount: 25
+                  },
+                  {
+                    name: "Sofa",
+                    prom: "Los mejores muebles para tu hogar",
+                    previous_price:"L.30,000",
+                    price:"L.26,455",
+                    img: "../img/sofa.jpg",
+                    amount: 30
+                  }
+                  
+              ]
+          },
+          {
+              name: "Empresa X",
+              products:[
+                  {
+                      name: "Mesa",
+                      prom: "Los mejores muebles para tu hogar",
+                      previous_price:"L.30,000",
+                      price:"L.28,450",
+                      img: "../img/table.jpg",
+                      amount: 50
+                  },
+                  {
+                    name: "Estante",
+                    prom: "Los mejores muebles para tu hogar",
+                    previous_price:"L.38,000",
+                    price:"L.33,000",
+                    img: "../img/estante.jpg",
+                    amount: 43
+                }
+              ]
+          },
+
+      ]
+  },
+  {
+    category: "Deportes",
+    business:[
+      {
+        name: "Diunsa",
+        products:[
+          {
+            name:"Balon de futbol",
+            prom:"Balon de futbol de la mejor calidad",
+            previous_price:"L.300",
+            price:"L.95",
+            img: "../img/Pelota.jpg",
+            amount:"30 disponibles"
+          },
+          {
+            name:"Raqueta de Tenis",
+            prom:"Lo mejor para el tenies",
+            previous_price:"L.3000",
+            price:"L.2,335",
+            img: "../img/tenis.jpeg",
+            amount:"15 dsponibles"
+          }
+        ] 
+
+      },
+      {
+        name: "Sports",
+        products:[
+          {
+            name:"Tacos de Futbol",
+            prom:"Futbol",
+            previous_price:"L.4,000",
+            price:"L.2,225",
+            img: "../img/tenis.jpg",
+            amount:"56 disponibles"
+          },
+          {
+            name:"Camisa",
+            prom:"Atletico de Madrid",
+            previous_price:"L.300",
+            price:"L.95",
+            img: "../img/camisa.jpg",
+            amount:"22 disponibles"
+          }
+        ]  
+      }
+    ]
+  }
+];
 
   function userValidation(){
 
@@ -198,7 +296,7 @@ function homeUser(){
           `
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
             <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
-                <img src="${product.img}" class="card-img-top">
+                <img src="${product.img}" class="card-img-top" height="300">
                 <div class="card-body">
                     <ul>
                         <li>${product.prom}</li>
@@ -227,7 +325,7 @@ function homeUser(){
           `
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
             <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
-                <img src="${product.img}" class="card-img-top">
+                <img src="${product.img}" class="card-img-top" height="300">
                 <div class="card-body">
                     <ul>
                         <li>${product.prom}</li>
@@ -245,10 +343,69 @@ function homeUser(){
           `;
         }
       }
+    }else if(categories[j].category == 'Ropa'){
+      document.getElementById('ropa').innerHTML='';
+      for(let k=0;k<categories[j].business.length;k++){
+        var busi = categories[j].business[k];
+        
+        for(let l=0;l<busi.products.length;l++){
+          var product = busi.products[l];
+          document.getElementById('ropa').innerHTML +=
+          `
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
+                <img src="${product.img}" class="card-img-top" heigth="300">
+                <div class="card-body">
+                    <ul>
+                        <li>${product.prom}</li>
+                        <li id="business">
+                           ${busi.name}
+                        </li>
+                        <li><i class="fas fa-tags"></i>${product.amount}</li>
+                        <li>${product.previous_price}</li>
+                        <li id="price">${product.price}</li>
+                        <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+          `;
+        }
+      }
+  }else if(categories[j].category == 'Tecnologia'){
+    document.getElementById('tecnologia').innerHTML='';
+    for(let k=0;k<categories[j].business.length;k++){
+      var busi = categories[j].business[k];
+      
+      for(let l=0;l<busi.products.length;l++){
+        var product = busi.products[l];
+        document.getElementById('tecnologia').innerHTML +=
+        `
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+          <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
+              <img src="${product.img}" class="card-img-top" height="300">
+              <div class="card-body">
+                  <ul>
+                      <li>${product.prom}</li>
+                      <li id="business">
+                         ${busi.name}
+                      </li>
+                      <li><i class="fas fa-tags"></i>${product.amount}</li>
+                      <li>${product.previous_price}</li>
+                      <li id="price">${product.price}</li>
+                      <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+        `;
+      }
     }
   }
+}
   }
 }
+
 homeUser();
    
 
@@ -267,7 +424,7 @@ function home(){
             `
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
               <div class="card shadow bg-white rounded">
-                  <img src="${product.img}" class="card-img-top">
+                  <img src="${product.img}" class="card-img-top" height="300">
                   <div class="card-body">
                       <ul>
                           <li>${product.prom}</li>
@@ -294,7 +451,7 @@ function home(){
             `
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
               <div class="card shadow bg-white rounded">
-                  <img src="${product.img}" class="card-img-top">
+                  <img src="${product.img}" class="card-img-top" height="300">
                   <div class="card-body">
                       <ul>
                           <li>${product.prom}</li>
@@ -312,7 +469,65 @@ function home(){
             `;
           }
         }
+      }else if(categories[j].category == 'Ropa'){
+        document.getElementById('ropa').innerHTML='';
+        for(let k=0;k<categories[j].business.length;k++){
+          var busi = categories[j].business[k];
+          
+          for(let l=0;l<busi.products.length;l++){
+            var product = busi.products[l];
+            document.getElementById('ropa').innerHTML +=
+            `
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
+                  <img src="${product.img}" class="card-img-top" height="300">
+                  <div class="card-body">
+                      <ul>
+                          <li>${product.prom}</li>
+                          <li id="business">
+                             ${busi.name}
+                          </li>
+                          <li><i class="fas fa-tags"></i>${product.amount}</li>
+                          <li>${product.previous_price}</li>
+                          <li id="price">${product.price}</li>
+                          <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+            `;
+          }
+        }
+    }else if(categories[j].category == 'Tecnologia'){
+      document.getElementById('tecnologia').innerHTML='';
+      for(let k=0;k<categories[j].business.length;k++){
+        var busi = categories[j].business[k];
+        
+        for(let l=0;l<busi.products.length;l++){
+          var product = busi.products[l];
+          document.getElementById('tecnologia').innerHTML +=
+          `
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
+                <img src="${product.img}" class="card-img-top" height="300">
+                <div class="card-body">
+                    <ul>
+                        <li>${product.prom}</li>
+                        <li id="business">
+                           ${busi.name}
+                        </li>
+                        <li><i class="fas fa-tags"></i>${product.amount}</li>
+                        <li>${product.previous_price}</li>
+                        <li id="price">${product.price}</li>
+                        <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+          `;
+        }
       }
+    }
     }
   }
 
@@ -347,7 +562,7 @@ function home(){
               `
               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card shadow bg-white rounded">
-                    <img src="${product.img}" class="card-img-top">
+                    <img src="${product.img}" class="card-img-top" height="300">
                     <div class="card-body">
                         <ul>
                             <li>${product.prom}</li>
@@ -375,7 +590,7 @@ function home(){
               `
               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card shadow bg-white rounded">
-                    <img src="${product.img}" class="card-img-top">
+                    <img src="${product.img}" class="card-img-top" height="300">
                     <div class="card-body">
                         <ul>
                             <li>${product.prom}</li>
@@ -392,7 +607,65 @@ function home(){
               `;
             }
           }
+        }else if(categories[j].category == 'Ropa'){
+          document.getElementById('ropa').innerHTML='';
+          for(let k=0;k<categories[j].business.length;k++){
+            var busi = categories[j].business[k];
+            
+            for(let l=0;l<busi.products.length;l++){
+              var product = busi.products[l];
+              document.getElementById('ropa').innerHTML +=
+              `
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
+                    <img src="${product.img}" class="card-img-top" height="300">
+                    <div class="card-body">
+                        <ul>
+                            <li>${product.prom}</li>
+                            <li id="business">
+                               ${busi.name}
+                            </li>
+                            <li><i class="fas fa-tags"></i>${product.amount}</li>
+                            <li>${product.previous_price}</li>
+                            <li id="price">${product.price}</li>
+                            <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+              `;
+            }
+          }
+      }else if(categories[j].category == 'Tecnologia'){
+        document.getElementById('tecnologia').innerHTML='';
+        for(let k=0;k<categories[j].business.length;k++){
+          var busi = categories[j].business[k];
+          
+          for(let l=0;l<busi.products.length;l++){
+            var product = busi.products[l];
+            document.getElementById('tecnologia').innerHTML +=
+            `
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="card shadow bg-white rounded" onclick="purchase('${product.img}' , '${busi.name}' , '${product.price}' , '${product.name}' , '${product.prom}')">
+                  <img src="${product.img}" class="card-img-top" height="300">
+                  <div class="card-body">
+                      <ul>
+                          <li>${product.prom}</li>
+                          <li id="business">
+                             ${busi.name}
+                          </li>
+                          <li><i class="fas fa-tags"></i>${product.amount}</li>
+                          <li>${product.previous_price}</li>
+                          <li id="price">${product.price}</li>
+                          <li><i class="fas fa-cart-arrow-down text-danger"></i>Comprar</li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+            `;
+          }
         }
+      }
       }
       }
     }
@@ -485,6 +758,6 @@ function addPurchase(img,business,price,name,description){
   });
 }
 
-
+  
 
    
