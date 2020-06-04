@@ -701,7 +701,7 @@ function purchase(img,business,price,name,description){
           <div class="col-lg-4">
             Cantidad A Solicitar : 
           </div><br>
-          <div class="col-lg-8 form-group">
+          <div class="form-group">
               <input type="text" class="form-control" id="amount">    
           </div><br>
           <div class="col-lg-4">

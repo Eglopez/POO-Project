@@ -198,7 +198,7 @@ function category(){
                   `
                   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="card shadow bg-white rounded">
-                        <img src="${product.img}" class="card-img-top">
+                        <img src="${product.img}" class="card-img-top" height="300">
                         <div class="card-body">
                             <ul>
                                 <li>${product.name}</li>

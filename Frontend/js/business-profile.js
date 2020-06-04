@@ -122,3 +122,44 @@ function updateProfile(){
   });
   $('#editBusinessModal').modal('hide');
 }
+
+function addSucursal(){
+  axios({
+    url:'../../Backend/api/sucursals.php?id='+`${getCookie(id_cookie)}`,
+    method:'post',
+    responseType:'json',
+    headers:{'Content-Type':'multipart/form-data'},
+    data:{
+      name:document.getElementById('sucursal-name').value,
+      address:document.getElementById('address').value,
+      latitude:document.getElementById('latitude-sucursal').value,
+      longitud:document.getElementById('longitud-sucursal').value
+    }
+  }).then(res => {
+    console.log(res);
+    $('#sucursalModal').modal('hide');
+    showSucursals();
+  }).catch(err =>{
+    console.log(err);
+  });
+}
+
+function showSucursals(){
+  axios({
+    url:'../../Backend/api/sucursals.php?id='+`${getCookie(id_cookie)}`,
+    method:'get',
+    responseType:'json'
+  }).then(res => {
+    
+    var sucursals = Object.values(res.data);
+    document.getElementById('sucursals').innerHTML = '';
+    for(let i=0;i<sucursals.length;i++){
+      document.getElementById('sucursals').innerHTML +=
+      `<a>${sucursals[i].name}</a><br>`;
+    
+   }
+  }).catch(err => {
+    console.log(err);
+  });
+}
+showSucursals();

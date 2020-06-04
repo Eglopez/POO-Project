@@ -93,10 +93,8 @@
                         <a href="">Huawei</a><br>
                         <a href="">Samsung</a>
                         <p>Sucursales</p>
-                        <a href="">Cascadas Mall</a><br>
-                        <a href="">City Mall</a><br>
-                        <a href="">Metro Masll</a><br>
-                        <button class="btn-sm btn-danger">Añadir sucursales</button>
+                        <div id="sucursals"></div>
+                        <button class="btn-sm btn-danger" type="button" data-toggle="modal" data-target="#sucursalModal">Añadir sucursales</button>
                     </div>
                     
                 </div>
@@ -221,6 +219,43 @@
             <div class="modal-footer">
               
               <button type="button" class="btn btn-danger" onclick="updateProfile()">Actualizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="sucursalModal" tabindex="-1" role="dialog" aria-labelledby="sucursalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #12103D;color: white;">
+              <h5 class="modal-title" id="exampleModalLabel">Añadir sucursal</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" style="background-color: whitesmoke;">
+              <div class="form-group">
+                  <label for="edit-bname">Name:</label>
+                  <input type="text" id="sucursal-name" class="form-control" placeholder="Ingrese el nuevo Nombre">
+              </div>
+              <div class="form-group">
+                  <label for="edit-bemail">Address:</label>
+                  <input type="text" id="address" class="form-control" placeholder="Ingrese el nuevo email">
+              </div>
+              
+              <div class="form-group">
+                  <label for="edit-latitude">Latitude:</label>
+                  <input type="text" id="latitude-sucursal" class="form-control" placeholder="latitude">
+              </div>
+              <div class="form-group">
+                  <label for="edit-longitug">Longitud:</label>
+                  <input type="text" id="longitud-sucursal" class="form-control" placeholder="longitud">
+              </div>
+            </div>
+            <div class="modal-footer">
+              
+              <button type="button" class="btn btn-danger" onclick="addSucursal()">Agregar</button>
             </div>
           </div>
         </div>
